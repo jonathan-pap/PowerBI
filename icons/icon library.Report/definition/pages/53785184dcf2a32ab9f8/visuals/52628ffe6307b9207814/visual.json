@@ -2,12 +2,12 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.7.0/schema.json",
   "name": "52628ffe6307b9207814",
   "position": {
-    "x": 71.842843779232922,
-    "y": 513.67633302151546,
-    "z": 15000,
-    "height": 116.14593077642657,
-    "width": 160.4490177736202,
-    "tabOrder": 13000
+    "x": 71.822660098522164,
+    "y": 513.39901477832518,
+    "z": 14000,
+    "height": 134.77832512315271,
+    "width": 160.49261083743843,
+    "tabOrder": 12000
   },
   "visual": {
     "visualType": "slicer",
@@ -81,7 +81,7 @@
                           [
                             {
                               "Literal": {
-                                "Value": "'Base'"
+                                "Value": "'Dark'"
                               }
                             }
                           ]
@@ -280,23 +280,5 @@
       "filterChanges": true
     },
     "drillFilterOtherVisuals": true
-  },
-  "filterConfig": {
-    "filters": [
-      {
-        "name": "d1313834580800e9dc01",
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "Color Pallette"
-              }
-            },
-            "Property": "Variant"
-          }
-        },
-        "type": "Categorical"
-      }
-    ]
   }
 }

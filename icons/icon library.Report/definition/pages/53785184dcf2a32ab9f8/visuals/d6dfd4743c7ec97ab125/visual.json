@@ -53,12 +53,12 @@
                       "Entity": "Setname"
                     }
                   },
-                  "Property": "Icon Builders Grey"
+                  "Property": "Icon Builders Black"
                 }
               },
-              "queryRef": "Setname.Icon Builders Grey",
-              "nativeQueryRef": "BG Grey",
-              "displayName": "BG Grey"
+              "queryRef": "Setname.Icon Builders",
+              "nativeQueryRef": "BG Black",
+              "displayName": "BG Black"
             },
             {
               "field": {
@@ -68,12 +68,12 @@
                       "Entity": "Setname"
                     }
                   },
-                  "Property": "Icon Builders Black"
+                  "Property": "Icon Builders Grey"
                 }
               },
-              "queryRef": "Setname.Icon Builders",
-              "nativeQueryRef": "BG Black",
-              "displayName": "BG Black"
+              "queryRef": "Setname.Icon Builders Grey",
+              "nativeQueryRef": "BG Grey",
+              "displayName": "BG Grey"
             }
           ]
         }
@@ -491,65 +491,5 @@
       ]
     },
     "drillFilterOtherVisuals": true
-  },
-  "filterConfig": {
-    "filters": [
-      {
-        "name": "e2e505be7ea667ee5120",
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "Icons"
-              }
-            },
-            "Property": "IconName"
-          }
-        },
-        "type": "Categorical"
-      },
-      {
-        "name": "665feba0a5f1c75cc1ae",
-        "field": {
-          "Measure": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "Setname"
-              }
-            },
-            "Property": "Icon Builders White"
-          }
-        },
-        "type": "Advanced"
-      },
-      {
-        "name": "08948d0f0afa5ca73a69",
-        "field": {
-          "Measure": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "Setname"
-              }
-            },
-            "Property": "Icon Builders Grey"
-          }
-        },
-        "type": "Advanced"
-      },
-      {
-        "name": "c27a9b980a181eb38653",
-        "field": {
-          "Measure": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "Setname"
-              }
-            },
-            "Property": "Icon Builders Black"
-          }
-        },
-        "type": "Advanced"
-      }
-    ]
   }
 }

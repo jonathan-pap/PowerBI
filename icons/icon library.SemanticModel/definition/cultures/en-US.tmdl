@@ -5,7 +5,7 @@ cultureInfo en-US
 			  "Version": "4.1.0",
 			  "Language": "en-US",
 			  "Entities": {
-			    "available_icon": {
+			    "icon_list": {
 			      "Definition": {
 			        "Binding": {
 			          "ConceptualEntity": "Icon List"
@@ -14,120 +14,73 @@ cultureInfo en-US
 			      "State": "Generated",
 			      "Terms": [
 			        {
-			          "available icon": {
+			          "icon list": {
 			            "State": "Generated"
 			          }
 			        },
 			        {
-			          "AvailableIcons": {
-			            "Type": "Noun",
-			            "State": "Generated",
-			            "Weight": 0.99
-			          }
-			        },
-			        {
-			          "available likeness": {
+			          "icon chronology": {
 			            "Type": "Noun",
 			            "State": "Suggested",
 			            "Source": {
 			              "Agent": "Thesaurus"
 			            },
-			            "Weight": 0.5
+			            "Weight": 0.75
 			          }
 			        },
 			        {
-			          "available representation": {
+			          "icon directory": {
 			            "Type": "Noun",
 			            "State": "Suggested",
 			            "Source": {
 			              "Agent": "Thesaurus"
 			            },
-			            "Weight": 0.5
+			            "Weight": 0.727
 			          }
 			        },
 			        {
-			          "available portrait": {
+			          "icon catalog": {
 			            "Type": "Noun",
 			            "State": "Suggested",
 			            "Source": {
 			              "Agent": "Thesaurus"
 			            },
-			            "Weight": 0.5
+			            "Weight": 0.727
 			          }
 			        },
 			        {
-			          "available emblem": {
+			          "icon catalogue": {
 			            "Type": "Noun",
 			            "State": "Suggested",
 			            "Source": {
 			              "Agent": "Thesaurus"
 			            },
-			            "Weight": 0.5
+			            "Weight": 0.727
 			          }
 			        },
 			        {
-			          "available logo": {
+			          "icon inventory": {
 			            "Type": "Noun",
 			            "State": "Suggested",
 			            "Source": {
 			              "Agent": "Thesaurus"
 			            },
-			            "Weight": 0.5
+			            "Weight": 0.727
 			          }
 			        },
 			        {
-			          "available image": {
+			          "icon record": {
 			            "Type": "Noun",
 			            "State": "Suggested",
 			            "Source": {
 			              "Agent": "Thesaurus"
 			            },
-			            "Weight": 0.485
-			          }
-			        },
-			        {
-			          "available sign": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.485
-			          }
-			        },
-			        {
-			          "available photograph": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.485
-			          }
-			        },
-			        {
-			          "available drawing": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.485
-			          }
-			        },
-			        {
-			          "available picture": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.485
+			            "Weight": 0.727
 			          }
 			        }
 			      ]
 			    },
-			    "available_icon.set_name": {
+			    "icon_list.set_name": {
 			      "Definition": {
 			        "Binding": {
 			          "ConceptualEntity": "Icon List",
@@ -239,7 +192,7 @@ cultureInfo en-US
 			        }
 			      ]
 			    },
-			    "available_icon.icon_name": {
+			    "icon_list.icon_name": {
 			      "Definition": {
 			        "Binding": {
 			          "ConceptualEntity": "Icon List",
@@ -1528,7 +1481,7 @@ cultureInfo en-US
 			      ],
 			      "NameType": "Name"
 			    },
-			    "color_palette": {
+			    "color_pallette": {
 			      "Definition": {
 			        "Binding": {
 			          "ConceptualEntity": "Color Pallette"
@@ -1537,26 +1490,13 @@ cultureInfo en-US
 			      "State": "Generated",
 			      "Terms": [
 			        {
-			          "color palette": {
+			          "color pallette": {
 			            "State": "Generated"
-			          }
-			        },
-			        {
-			          "color_palette": {
-			            "Type": "Noun",
-			            "State": "Generated",
-			            "Weight": 0.99
-			          }
-			        },
-			        {
-			          "palette": {
-			            "State": "Generated",
-			            "Weight": 0.97
 			          }
 			        }
 			      ]
 			    },
-			    "color_palette.color_name": {
+			    "color_pallette.color_name": {
 			      "Definition": {
 			        "Binding": {
 			          "ConceptualEntity": "Color Pallette",
@@ -1685,7 +1625,7 @@ cultureInfo en-US
 			        }
 			      ]
 			    },
-			    "color_palette.hex": {
+			    "color_pallette.hex": {
 			      "Definition": {
 			        "Binding": {
 			          "ConceptualEntity": "Color Pallette",
@@ -1751,7 +1691,7 @@ cultureInfo en-US
 			        }
 			      ]
 			    },
-			    "color_palette.hex_clean": {
+			    "color_pallette.hex_clean": {
 			      "Definition": {
 			        "Binding": {
 			          "ConceptualEntity": "Color Pallette",
@@ -1824,7 +1764,7 @@ cultureInfo en-US
 			        }
 			      ]
 			    },
-			    "color_palette.svg_safe": {
+			    "color_pallette.svg_safe": {
 			      "Definition": {
 			        "Binding": {
 			          "ConceptualEntity": "Color Pallette",
@@ -1847,7 +1787,7 @@ cultureInfo en-US
 			        }
 			      ]
 			    },
-			    "color_palette.variant": {
+			    "color_pallette.variant": {
 			      "Definition": {
 			        "Binding": {
 			          "ConceptualEntity": "Color Pallette",
@@ -1943,7 +1883,7 @@ cultureInfo en-US
 			        }
 			      ]
 			    },
-			    "color_palette.column_1": {
+			    "color_pallette.column_1": {
 			      "Definition": {
 			        "Binding": {
 			          "ConceptualEntity": "Color Pallette",
@@ -2223,9 +2163,1860 @@ cultureInfo en-US
 			          }
 			        }
 			      ]
+			    },
+			    "setname.icon_grid": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Setname",
+			          "ConceptualProperty": "Icon Grid"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "icon grid": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "grid": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "icon gridiron": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        },
+			        {
+			          "icon framework": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        },
+			        {
+			          "gridiron": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.491
+			          }
+			        },
+			        {
+			          "framework": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.491
+			          }
+			        },
+			        {
+			          "icon network": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.485
+			          }
+			        },
+			        {
+			          "icon lattice": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.485
+			          }
+			        },
+			        {
+			          "icon net": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.485
+			          }
+			        },
+			        {
+			          "icon web": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.485
+			          }
+			        },
+			        {
+			          "icon grid-iron": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.485
+			          }
+			        },
+			        {
+			          "icon grating": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.485
+			          }
+			        }
+			      ]
+			    },
+			    "setname.in_page": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Setname",
+			          "ConceptualProperty": "In Page"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "in page": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "page": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "in sheet": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.485
+			          }
+			        },
+			        {
+			          "in side": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.485
+			          }
+			        },
+			        {
+			          "in leaf": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.485
+			          }
+			        },
+			        {
+			          "in folio": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.485
+			          }
+			        },
+			        {
+			          "sheet": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        },
+			        {
+			          "side": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        },
+			        {
+			          "leaf": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        },
+			        {
+			          "folio": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        }
+			      ]
+			    },
+			    "setname.show_page": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Setname",
+			          "ConceptualProperty": "Show Page"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "show page": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "page": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "show sheet": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.485
+			          }
+			        },
+			        {
+			          "show side": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.485
+			          }
+			        },
+			        {
+			          "show leaf": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.485
+			          }
+			        },
+			        {
+			          "show folio": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.485
+			          }
+			        },
+			        {
+			          "sheet": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        },
+			        {
+			          "side": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        },
+			        {
+			          "leaf": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        },
+			        {
+			          "folio": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        }
+			      ]
+			    },
+			    "setname.icon_names_grid": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Setname",
+			          "ConceptualProperty": "Icon Names Grid"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "icon names grid": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "grid": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "names grid": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "icon name gridiron": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.508
+			          }
+			        },
+			        {
+			          "icon name framework": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.508
+			          }
+			        },
+			        {
+			          "name gridiron": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        },
+			        {
+			          "name framework": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        },
+			        {
+			          "icon name network": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.492
+			          }
+			        },
+			        {
+			          "icon name lattice": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.492
+			          }
+			        },
+			        {
+			          "icon name net": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.492
+			          }
+			        },
+			        {
+			          "icon name web": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.492
+			          }
+			        },
+			        {
+			          "icon name grid-iron": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.492
+			          }
+			        },
+			        {
+			          "icon name grating": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.492
+			          }
+			        }
+			      ]
+			    },
+			    "setname.SVG_dynamic_size": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Setname",
+			          "ConceptualProperty": "SVG Dynamic Size"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "SVG dynamic size": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "svg dynamic extent": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.508
+			          }
+			        },
+			        {
+			          "svg dynamic magnitude": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.508
+			          }
+			        },
+			        {
+			          "svg dynamic scope": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.492
+			          }
+			        },
+			        {
+			          "svg dynamic volume": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.482
+			          }
+			        },
+			        {
+			          "svg dynamic dimension": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.468
+			          }
+			        },
+			        {
+			          "svg dynamic mass": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.468
+			          }
+			        },
+			        {
+			          "svg dynamic bulk": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.468
+			          }
+			        },
+			        {
+			          "svg dynamic amount": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.468
+			          }
+			        },
+			        {
+			          "svg dynamic range": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.468
+			          }
+			        }
+			      ]
+			    },
+			    "icon.icon_rank": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Icons",
+			          "ConceptualProperty": "IconRank"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "icon rank": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "IconRank": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        }
+			      ]
+			    },
+			    "icon_page": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "IconPages"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "icon page": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "IconPages": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "page": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "icon sheet": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.485
+			          }
+			        },
+			        {
+			          "icon side": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.485
+			          }
+			        },
+			        {
+			          "icon leaf": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.485
+			          }
+			        },
+			        {
+			          "icon folio": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.485
+			          }
+			        },
+			        {
+			          "sheet": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        },
+			        {
+			          "side": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        },
+			        {
+			          "leaf": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        },
+			        {
+			          "folio": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        }
+			      ]
+			    },
+			    "icon_page.page_number": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "IconPages",
+			          "ConceptualProperty": "PageNumber"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "page number": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "PageNumber": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "page no": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.727
+			          }
+			        }
+			      ],
+			      "NameType": "Identifier"
+			    },
+			    "icon_page.page_num": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "IconPages",
+			          "ConceptualProperty": "PageNum"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "page num": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "PageNum": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        }
+			      ]
+			    },
+			    "size": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Size"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "size": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "extent": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.491
+			          }
+			        },
+			        {
+			          "magnitude": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.491
+			          }
+			        },
+			        {
+			          "scope": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        },
+			        {
+			          "volume": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.466
+			          }
+			        },
+			        {
+			          "dimension": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.452
+			          }
+			        },
+			        {
+			          "mass": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.452
+			          }
+			        },
+			        {
+			          "bulk": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.452
+			          }
+			        }
+			      ]
+			    },
+			    "size.dynamic_size": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Size",
+			          "ConceptualProperty": "DynamicSize"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "dynamic size": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "DynamicSize": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "dynamic extent": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        },
+			        {
+			          "dynamic magnitude": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        },
+			        {
+			          "dynamic scope": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.485
+			          }
+			        },
+			        {
+			          "dynamic volume": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.475
+			          }
+			        },
+			        {
+			          "dynamic dimension": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.461
+			          }
+			        },
+			        {
+			          "dynamic mass": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.461
+			          }
+			        },
+			        {
+			          "dynamic bulk": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.461
+			          }
+			        },
+			        {
+			          "dynamic amount": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.461
+			          }
+			        },
+			        {
+			          "dynamic range": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.461
+			          }
+			        },
+			        {
+			          "Icon Size": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "setname.SVG_dynamic_size_white": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Setname",
+			          "ConceptualProperty": "SVG Dynamic Size White"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "SVG dynamic size white": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "white": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "size white": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "dynamic size white": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "silver": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        },
+			        {
+			          "gray": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        },
+			        {
+			          "greying": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        },
+			        {
+			          "graying": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        },
+			        {
+			          "freezing": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.452
+			          }
+			        }
+			      ]
+			    },
+			    "setname.SVG_dynamic_size_black": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Setname",
+			          "ConceptualProperty": "SVG Dynamic Size Black"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "SVG dynamic size black": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "black": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "size black": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "dynamic size black": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "dark": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        },
+			        {
+			          "obscure": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        },
+			        {
+			          "dim": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        }
+			      ]
+			    },
+			    "setname.SVG_dynamic_size_grey": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Setname",
+			          "ConceptualProperty": "SVG Dynamic Size Grey"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "SVG dynamic size grey": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "grey": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "size grey": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "dynamic size grey": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "ancient": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        },
+			        {
+			          "depressing": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.452
+			          }
+			        },
+			        {
+			          "melancholy": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.452
+			          }
+			        },
+			        {
+			          "drab": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.452
+			          }
+			        }
+			      ]
 			    }
 			  },
 			  "Relationships": {
+			    "color_pallette_has_setname_SVG_dynamic_size_grey": {
+			      "Binding": {
+			        "ConceptualEntity": "Color Pallette"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "color_pallette": {
+			          "Target": {
+			            "Entity": "color_pallette"
+			          }
+			        },
+			        "setname.SVG_dynamic_size_grey": {
+			          "Target": {
+			            "Entity": "setname.SVG_dynamic_size_grey"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "color_pallette"
+			            },
+			            "Object": {
+			              "Role": "setname.SVG_dynamic_size_grey"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "color_pallettes_have_SVG_dynamic_size_grey"
+			        }
+			      ]
+			    },
+			    "size_has_setname_SVG_dynamic_size_black": {
+			      "Binding": {
+			        "ConceptualEntity": "Size"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "size": {
+			          "Target": {
+			            "Entity": "size"
+			          }
+			        },
+			        "setname.SVG_dynamic_size_black": {
+			          "Target": {
+			            "Entity": "setname.SVG_dynamic_size_black"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "size"
+			            },
+			            "Object": {
+			              "Role": "setname.SVG_dynamic_size_black"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "sizes_have_SVG_dynamic_size_black"
+			        }
+			      ]
+			    },
+			    "icon_has_setname_SVG_dynamic_size_black": {
+			      "Binding": {
+			        "ConceptualEntity": "Icons"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "icon": {
+			          "Target": {
+			            "Entity": "icon"
+			          }
+			        },
+			        "setname.SVG_dynamic_size_black": {
+			          "Target": {
+			            "Entity": "setname.SVG_dynamic_size_black"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "icon"
+			            },
+			            "Object": {
+			              "Role": "setname.SVG_dynamic_size_black"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "icons_have_SVG_dynamic_size_black"
+			        }
+			      ]
+			    },
+			    "color_pallette_has_setname_SVG_dynamic_size_black": {
+			      "Binding": {
+			        "ConceptualEntity": "Color Pallette"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "color_pallette": {
+			          "Target": {
+			            "Entity": "color_pallette"
+			          }
+			        },
+			        "setname.SVG_dynamic_size_black": {
+			          "Target": {
+			            "Entity": "setname.SVG_dynamic_size_black"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "color_pallette"
+			            },
+			            "Object": {
+			              "Role": "setname.SVG_dynamic_size_black"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "color_pallettes_have_SVG_dynamic_size_black"
+			        }
+			      ]
+			    },
+			    "size_has_setname_SVG_dynamic_size_white": {
+			      "Binding": {
+			        "ConceptualEntity": "Size"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "size": {
+			          "Target": {
+			            "Entity": "size"
+			          }
+			        },
+			        "setname.SVG_dynamic_size_white": {
+			          "Target": {
+			            "Entity": "setname.SVG_dynamic_size_white"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "size"
+			            },
+			            "Object": {
+			              "Role": "setname.SVG_dynamic_size_white"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "sizes_have_SVG_dynamic_size_white"
+			        }
+			      ]
+			    },
+			    "icon_has_setname_SVG_dynamic_size_white": {
+			      "Binding": {
+			        "ConceptualEntity": "Icons"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "icon": {
+			          "Target": {
+			            "Entity": "icon"
+			          }
+			        },
+			        "setname.SVG_dynamic_size_white": {
+			          "Target": {
+			            "Entity": "setname.SVG_dynamic_size_white"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "icon"
+			            },
+			            "Object": {
+			              "Role": "setname.SVG_dynamic_size_white"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "icons_have_SVG_dynamic_size_white"
+			        }
+			      ]
+			    },
+			    "color_pallette_has_setname_SVG_dynamic_size_white": {
+			      "Binding": {
+			        "ConceptualEntity": "Color Pallette"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "color_pallette": {
+			          "Target": {
+			            "Entity": "color_pallette"
+			          }
+			        },
+			        "setname.SVG_dynamic_size_white": {
+			          "Target": {
+			            "Entity": "setname.SVG_dynamic_size_white"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "color_pallette"
+			            },
+			            "Object": {
+			              "Role": "setname.SVG_dynamic_size_white"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "color_pallettes_have_SVG_dynamic_size_white"
+			        }
+			      ]
+			    },
+			    "size_has_dynamic_size": {
+			      "Binding": {
+			        "ConceptualEntity": "Size"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "size": {
+			          "Target": {
+			            "Entity": "size"
+			          }
+			        },
+			        "size.dynamic_size": {
+			          "Target": {
+			            "Entity": "size.dynamic_size"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "size"
+			            },
+			            "Object": {
+			              "Role": "size.dynamic_size"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "sizes_have_dynamic_sizes"
+			        }
+			      ]
+			    },
+			    "icon_page_has_page_num": {
+			      "Binding": {
+			        "ConceptualEntity": "IconPages"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "icon_page": {
+			          "Target": {
+			            "Entity": "icon_page"
+			          }
+			        },
+			        "icon_page.page_num": {
+			          "Target": {
+			            "Entity": "icon_page.page_num"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "icon_page"
+			            },
+			            "Object": {
+			              "Role": "icon_page.page_num"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "icon_pages_have_page_nums"
+			        }
+			      ]
+			    },
+			    "icon_page_has_page_number": {
+			      "Binding": {
+			        "ConceptualEntity": "IconPages"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "icon_page": {
+			          "Target": {
+			            "Entity": "icon_page"
+			          }
+			        },
+			        "icon_page.page_number": {
+			          "Target": {
+			            "Entity": "icon_page.page_number"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "icon_page"
+			            },
+			            "Object": {
+			              "Role": "icon_page.page_number"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "icon_pages_have_page_numbers"
+			        },
+			        {
+			          "Name": {
+			            "Subject": {
+			              "Role": "icon_page"
+			            },
+			            "Name": {
+			              "Role": "icon_page.page_number"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "page_numbers_are_names_IDs_of_icon_pages"
+			        }
+			      ]
+			    },
+			    "icon_has_icon_rank": {
+			      "Binding": {
+			        "ConceptualEntity": "Icons"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "icon": {
+			          "Target": {
+			            "Entity": "icon"
+			          }
+			        },
+			        "icon.icon_rank": {
+			          "Target": {
+			            "Entity": "icon.icon_rank"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "icon"
+			            },
+			            "Object": {
+			              "Role": "icon.icon_rank"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "icons_have_icon_ranks"
+			        }
+			      ]
+			    },
+			    "size_has_setname_SVG_dynamic_size": {
+			      "Binding": {
+			        "ConceptualEntity": "Size"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "size": {
+			          "Target": {
+			            "Entity": "size"
+			          }
+			        },
+			        "setname.SVG_dynamic_size": {
+			          "Target": {
+			            "Entity": "setname.SVG_dynamic_size"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "size"
+			            },
+			            "Object": {
+			              "Role": "setname.SVG_dynamic_size"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "sizes_have_SVG_dynamic_size"
+			        }
+			      ]
+			    },
+			    "icon_has_setname_SVG_dynamic_size": {
+			      "Binding": {
+			        "ConceptualEntity": "Icons"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "icon": {
+			          "Target": {
+			            "Entity": "icon"
+			          }
+			        },
+			        "setname.SVG_dynamic_size": {
+			          "Target": {
+			            "Entity": "setname.SVG_dynamic_size"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "icon"
+			            },
+			            "Object": {
+			              "Role": "setname.SVG_dynamic_size"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "icons_have_SVG_dynamic_size"
+			        }
+			      ]
+			    },
+			    "color_pallette_has_setname_SVG_dynamic_size": {
+			      "Binding": {
+			        "ConceptualEntity": "Color Pallette"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "color_pallette": {
+			          "Target": {
+			            "Entity": "color_pallette"
+			          }
+			        },
+			        "setname.SVG_dynamic_size": {
+			          "Target": {
+			            "Entity": "setname.SVG_dynamic_size"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "color_pallette"
+			            },
+			            "Object": {
+			              "Role": "setname.SVG_dynamic_size"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "color_pallettes_have_SVG_dynamic_size"
+			        }
+			      ]
+			    },
+			    "setname_has_icon_names_grid": {
+			      "Binding": {
+			        "ConceptualEntity": "Setname"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "setname": {
+			          "Target": {
+			            "Entity": "setname"
+			          }
+			        },
+			        "setname.icon_names_grid": {
+			          "Target": {
+			            "Entity": "setname.icon_names_grid"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "setname"
+			            },
+			            "Object": {
+			              "Role": "setname.icon_names_grid"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "setnames_have_icon_names_grid"
+			        }
+			      ]
+			    },
+			    "icon_has_setname_show_page": {
+			      "Binding": {
+			        "ConceptualEntity": "Icons"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "icon": {
+			          "Target": {
+			            "Entity": "icon"
+			          }
+			        },
+			        "setname.show_page": {
+			          "Target": {
+			            "Entity": "setname.show_page"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "icon"
+			            },
+			            "Object": {
+			              "Role": "setname.show_page"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "icons_have_show_page"
+			        }
+			      ]
+			    },
+			    "icon_page_has_setname_show_page": {
+			      "Binding": {
+			        "ConceptualEntity": "IconPages"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "icon_page": {
+			          "Target": {
+			            "Entity": "icon_page"
+			          }
+			        },
+			        "setname.show_page": {
+			          "Target": {
+			            "Entity": "setname.show_page"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "icon_page"
+			            },
+			            "Object": {
+			              "Role": "setname.show_page"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "icon_pages_have_show_page"
+			        }
+			      ]
+			    },
+			    "setname_has_in_page": {
+			      "Binding": {
+			        "ConceptualEntity": "Setname"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "setname": {
+			          "Target": {
+			            "Entity": "setname"
+			          }
+			        },
+			        "setname.in_page": {
+			          "Target": {
+			            "Entity": "setname.in_page"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "setname"
+			            },
+			            "Object": {
+			              "Role": "setname.in_page"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "setnames_have_in_page"
+			        }
+			      ]
+			    },
+			    "setname_has_icon_grid": {
+			      "Binding": {
+			        "ConceptualEntity": "Setname"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "setname": {
+			          "Target": {
+			            "Entity": "setname"
+			          }
+			        },
+			        "setname.icon_grid": {
+			          "Target": {
+			            "Entity": "setname.icon_grid"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "setname"
+			            },
+			            "Object": {
+			              "Role": "setname.icon_grid"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "setnames_have_icon_grid"
+			        }
+			      ]
+			    },
+			    "icon_has_setname_icon_count": {
+			      "Binding": {
+			        "ConceptualEntity": "Icons"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "icon": {
+			          "Target": {
+			            "Entity": "icon"
+			          }
+			        },
+			        "setname.icon_count": {
+			          "Target": {
+			            "Entity": "setname.icon_count"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "icon"
+			            },
+			            "Object": {
+			              "Role": "setname.icon_count"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "icons_have_icon_count"
+			        }
+			      ]
+			    },
 			    "icon_has_letter": {
 			      "Binding": {
 			        "ConceptualEntity": "Icons"
@@ -2256,39 +4047,6 @@ cultureInfo en-US
 			          "State": "Generated",
 			          "Weight": 0.99,
 			          "ID": "icons_have_letters"
-			        }
-			      ]
-			    },
-			    "color_palette_has_setname_icon_builders_s": {
-			      "Binding": {
-			        "ConceptualEntity": "Color Pallette"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "color_palette": {
-			          "Target": {
-			            "Entity": "color_palette"
-			          }
-			        },
-			        "setname.icon_builders_s": {
-			          "Target": {
-			            "Entity": "setname.icon_builders_s"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "color_palette"
-			            },
-			            "Object": {
-			              "Role": "setname.icon_builders_s"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "color_palettes_have_icon_builders_s"
 			        }
 			      ]
 			    },
@@ -2325,20 +4083,20 @@ cultureInfo en-US
 			        }
 			      ]
 			    },
-			    "color_palette_has_setname_icon_builders_grey": {
+			    "color_pallette_has_setname_icon_builders_s": {
 			      "Binding": {
 			        "ConceptualEntity": "Color Pallette"
 			      },
 			      "State": "Generated",
 			      "Roles": {
-			        "color_palette": {
+			        "color_pallette": {
 			          "Target": {
-			            "Entity": "color_palette"
+			            "Entity": "color_pallette"
 			          }
 			        },
-			        "setname.icon_builders_grey": {
+			        "setname.icon_builders_s": {
 			          "Target": {
-			            "Entity": "setname.icon_builders_grey"
+			            "Entity": "setname.icon_builders_s"
 			          }
 			        }
 			      },
@@ -2346,15 +4104,15 @@ cultureInfo en-US
 			        {
 			          "Attribute": {
 			            "Subject": {
-			              "Role": "color_palette"
+			              "Role": "color_pallette"
 			            },
 			            "Object": {
-			              "Role": "setname.icon_builders_grey"
+			              "Role": "setname.icon_builders_s"
 			            }
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "color_palettes_have_icon_builders_grey"
+			          "ID": "color_pallettes_have_icon_builders_s"
 			        }
 			      ]
 			    },
@@ -2391,20 +4149,20 @@ cultureInfo en-US
 			        }
 			      ]
 			    },
-			    "color_palette_has_column_1": {
+			    "color_pallette_has_setname_icon_builders_grey": {
 			      "Binding": {
 			        "ConceptualEntity": "Color Pallette"
 			      },
 			      "State": "Generated",
 			      "Roles": {
-			        "color_palette": {
+			        "color_pallette": {
 			          "Target": {
-			            "Entity": "color_palette"
+			            "Entity": "color_pallette"
 			          }
 			        },
-			        "color_palette.column_1": {
+			        "setname.icon_builders_grey": {
 			          "Target": {
-			            "Entity": "color_palette.column_1"
+			            "Entity": "setname.icon_builders_grey"
 			          }
 			        }
 			      },
@@ -2412,32 +4170,32 @@ cultureInfo en-US
 			        {
 			          "Attribute": {
 			            "Subject": {
-			              "Role": "color_palette"
+			              "Role": "color_pallette"
 			            },
 			            "Object": {
-			              "Role": "color_palette.column_1"
+			              "Role": "setname.icon_builders_grey"
 			            }
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "color_palettes_have_column_1"
+			          "ID": "color_pallettes_have_icon_builders_grey"
 			        }
 			      ]
 			    },
-			    "color_palette_has_variant": {
+			    "color_pallette_has_column_1": {
 			      "Binding": {
 			        "ConceptualEntity": "Color Pallette"
 			      },
 			      "State": "Generated",
 			      "Roles": {
-			        "color_palette": {
+			        "color_pallette": {
 			          "Target": {
-			            "Entity": "color_palette"
+			            "Entity": "color_pallette"
 			          }
 			        },
-			        "color_palette.variant": {
+			        "color_pallette.column_1": {
 			          "Target": {
-			            "Entity": "color_palette.variant"
+			            "Entity": "color_pallette.column_1"
 			          }
 			        }
 			      },
@@ -2445,32 +4203,32 @@ cultureInfo en-US
 			        {
 			          "Attribute": {
 			            "Subject": {
-			              "Role": "color_palette"
+			              "Role": "color_pallette"
 			            },
 			            "Object": {
-			              "Role": "color_palette.variant"
+			              "Role": "color_pallette.column_1"
 			            }
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "color_palettes_have_variants"
+			          "ID": "color_pallettes_have_column_1"
 			        }
 			      ]
 			    },
-			    "color_palette_has_svg_safe": {
+			    "color_pallette_has_variant": {
 			      "Binding": {
 			        "ConceptualEntity": "Color Pallette"
 			      },
 			      "State": "Generated",
 			      "Roles": {
-			        "color_palette": {
+			        "color_pallette": {
 			          "Target": {
-			            "Entity": "color_palette"
+			            "Entity": "color_pallette"
 			          }
 			        },
-			        "color_palette.svg_safe": {
+			        "color_pallette.variant": {
 			          "Target": {
-			            "Entity": "color_palette.svg_safe"
+			            "Entity": "color_pallette.variant"
 			          }
 			        }
 			      },
@@ -2478,32 +4236,32 @@ cultureInfo en-US
 			        {
 			          "Attribute": {
 			            "Subject": {
-			              "Role": "color_palette"
+			              "Role": "color_pallette"
 			            },
 			            "Object": {
-			              "Role": "color_palette.svg_safe"
+			              "Role": "color_pallette.variant"
 			            }
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "color_palettes_have_svg_safes"
+			          "ID": "color_pallettes_have_variants"
 			        }
 			      ]
 			    },
-			    "color_palette_has_hex_clean": {
+			    "color_pallette_has_svg_safe": {
 			      "Binding": {
 			        "ConceptualEntity": "Color Pallette"
 			      },
 			      "State": "Generated",
 			      "Roles": {
-			        "color_palette": {
+			        "color_pallette": {
 			          "Target": {
-			            "Entity": "color_palette"
+			            "Entity": "color_pallette"
 			          }
 			        },
-			        "color_palette.hex_clean": {
+			        "color_pallette.svg_safe": {
 			          "Target": {
-			            "Entity": "color_palette.hex_clean"
+			            "Entity": "color_pallette.svg_safe"
 			          }
 			        }
 			      },
@@ -2511,32 +4269,32 @@ cultureInfo en-US
 			        {
 			          "Attribute": {
 			            "Subject": {
-			              "Role": "color_palette"
+			              "Role": "color_pallette"
 			            },
 			            "Object": {
-			              "Role": "color_palette.hex_clean"
+			              "Role": "color_pallette.svg_safe"
 			            }
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "color_palettes_have_hex_clean"
+			          "ID": "color_pallettes_have_svg_safes"
 			        }
 			      ]
 			    },
-			    "color_palette_has_hex": {
+			    "color_pallette_has_hex_clean": {
 			      "Binding": {
 			        "ConceptualEntity": "Color Pallette"
 			      },
 			      "State": "Generated",
 			      "Roles": {
-			        "color_palette": {
+			        "color_pallette": {
 			          "Target": {
-			            "Entity": "color_palette"
+			            "Entity": "color_pallette"
 			          }
 			        },
-			        "color_palette.hex": {
+			        "color_pallette.hex_clean": {
 			          "Target": {
-			            "Entity": "color_palette.hex"
+			            "Entity": "color_pallette.hex_clean"
 			          }
 			        }
 			      },
@@ -2544,32 +4302,32 @@ cultureInfo en-US
 			        {
 			          "Attribute": {
 			            "Subject": {
-			              "Role": "color_palette"
+			              "Role": "color_pallette"
 			            },
 			            "Object": {
-			              "Role": "color_palette.hex"
+			              "Role": "color_pallette.hex_clean"
 			            }
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "color_palettes_have_hexes"
+			          "ID": "color_pallettes_have_hex_clean"
 			        }
 			      ]
 			    },
-			    "color_palette_has_color_name": {
+			    "color_pallette_has_hex": {
 			      "Binding": {
 			        "ConceptualEntity": "Color Pallette"
 			      },
 			      "State": "Generated",
 			      "Roles": {
-			        "color_palette": {
+			        "color_pallette": {
 			          "Target": {
-			            "Entity": "color_palette"
+			            "Entity": "color_pallette"
 			          }
 			        },
-			        "color_palette.color_name": {
+			        "color_pallette.hex": {
 			          "Target": {
-			            "Entity": "color_palette.color_name"
+			            "Entity": "color_pallette.hex"
 			          }
 			        }
 			      },
@@ -2577,15 +4335,48 @@ cultureInfo en-US
 			        {
 			          "Attribute": {
 			            "Subject": {
-			              "Role": "color_palette"
+			              "Role": "color_pallette"
 			            },
 			            "Object": {
-			              "Role": "color_palette.color_name"
+			              "Role": "color_pallette.hex"
 			            }
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "color_palettes_have_color_names"
+			          "ID": "color_pallettes_have_hexes"
+			        }
+			      ]
+			    },
+			    "color_pallette_has_color_name": {
+			      "Binding": {
+			        "ConceptualEntity": "Color Pallette"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "color_pallette": {
+			          "Target": {
+			            "Entity": "color_pallette"
+			          }
+			        },
+			        "color_pallette.color_name": {
+			          "Target": {
+			            "Entity": "color_pallette.color_name"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "color_pallette"
+			            },
+			            "Object": {
+			              "Role": "color_pallette.color_name"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "color_pallettes_have_color_names"
 			        }
 			      ]
 			    },
@@ -2826,39 +4617,6 @@ cultureInfo en-US
 			        }
 			      ]
 			    },
-			    "color_palette_has_setname_icon_builders_white": {
-			      "Binding": {
-			        "ConceptualEntity": "Color Pallette"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "color_palette": {
-			          "Target": {
-			            "Entity": "color_palette"
-			          }
-			        },
-			        "setname.icon_builders_white": {
-			          "Target": {
-			            "Entity": "setname.icon_builders_white"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "color_palette"
-			            },
-			            "Object": {
-			              "Role": "setname.icon_builders_white"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "color_palettes_have_icon_builders_white"
-			        }
-			      ]
-			    },
 			    "icon_has_setname_icon_builders_white": {
 			      "Binding": {
 			        "ConceptualEntity": "Icons"
@@ -2892,20 +4650,20 @@ cultureInfo en-US
 			        }
 			      ]
 			    },
-			    "color_palette_has_setname_icon_builders_black": {
+			    "color_pallette_has_setname_icon_builders_white": {
 			      "Binding": {
 			        "ConceptualEntity": "Color Pallette"
 			      },
 			      "State": "Generated",
 			      "Roles": {
-			        "color_palette": {
+			        "color_pallette": {
 			          "Target": {
-			            "Entity": "color_palette"
+			            "Entity": "color_pallette"
 			          }
 			        },
-			        "setname.icon_builders_black": {
+			        "setname.icon_builders_white": {
 			          "Target": {
-			            "Entity": "setname.icon_builders_black"
+			            "Entity": "setname.icon_builders_white"
 			          }
 			        }
 			      },
@@ -2913,15 +4671,15 @@ cultureInfo en-US
 			        {
 			          "Attribute": {
 			            "Subject": {
-			              "Role": "color_palette"
+			              "Role": "color_pallette"
 			            },
 			            "Object": {
-			              "Role": "setname.icon_builders_black"
+			              "Role": "setname.icon_builders_white"
 			            }
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "color_palettes_have_icon_builders_black"
+			          "ID": "color_pallettes_have_icon_builders_white"
 			        }
 			      ]
 			    },
@@ -2958,6 +4716,39 @@ cultureInfo en-US
 			        }
 			      ]
 			    },
+			    "color_pallette_has_setname_icon_builders_black": {
+			      "Binding": {
+			        "ConceptualEntity": "Color Pallette"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "color_pallette": {
+			          "Target": {
+			            "Entity": "color_pallette"
+			          }
+			        },
+			        "setname.icon_builders_black": {
+			          "Target": {
+			            "Entity": "setname.icon_builders_black"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "color_pallette"
+			            },
+			            "Object": {
+			              "Role": "setname.icon_builders_black"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "color_pallettes_have_icon_builders_black"
+			        }
+			      ]
+			    },
 			    "setname_has_set_name": {
 			      "Binding": {
 			        "ConceptualEntity": "Setname"
@@ -2991,20 +4782,20 @@ cultureInfo en-US
 			        }
 			      ]
 			    },
-			    "available_icon_has_icon_name": {
+			    "icon_list_has_icon_name": {
 			      "Binding": {
 			        "ConceptualEntity": "Icon List"
 			      },
 			      "State": "Generated",
 			      "Roles": {
-			        "available_icon": {
+			        "icon_list": {
 			          "Target": {
-			            "Entity": "available_icon"
+			            "Entity": "icon_list"
 			          }
 			        },
-			        "available_icon.icon_name": {
+			        "icon_list.icon_name": {
 			          "Target": {
-			            "Entity": "available_icon.icon_name"
+			            "Entity": "icon_list.icon_name"
 			          }
 			        }
 			      },
@@ -3012,19 +4803,19 @@ cultureInfo en-US
 			        {
 			          "Attribute": {
 			            "Subject": {
-			              "Role": "available_icon"
+			              "Role": "icon_list"
 			            },
 			            "Object": {
-			              "Role": "available_icon.icon_name"
+			              "Role": "icon_list.icon_name"
 			            }
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "available_icons_have_icon_names"
+			          "ID": "icon_lists_have_icon_names"
 			        }
 			      ]
 			    },
-			    "icon_has_setname_icon_count": {
+			    "icon_has_setname_SVG_dynamic_size_grey": {
 			      "Binding": {
 			        "ConceptualEntity": "Icons"
 			      },
@@ -3035,9 +4826,9 @@ cultureInfo en-US
 			            "Entity": "icon"
 			          }
 			        },
-			        "setname.icon_count": {
+			        "setname.SVG_dynamic_size_grey": {
 			          "Target": {
-			            "Entity": "setname.icon_count"
+			            "Entity": "setname.SVG_dynamic_size_grey"
 			          }
 			        }
 			      },
@@ -3048,24 +4839,57 @@ cultureInfo en-US
 			              "Role": "icon"
 			            },
 			            "Object": {
-			              "Role": "setname.icon_count"
+			              "Role": "setname.SVG_dynamic_size_grey"
 			            }
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "icons_have_icon_count"
+			          "ID": "icons_have_SVG_dynamic_size_grey"
 			        }
 			      ]
 			    },
-			    "available_icon_has_setname": {
+			    "size_has_setname_SVG_dynamic_size_grey": {
+			      "Binding": {
+			        "ConceptualEntity": "Size"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "size": {
+			          "Target": {
+			            "Entity": "size"
+			          }
+			        },
+			        "setname.SVG_dynamic_size_grey": {
+			          "Target": {
+			            "Entity": "setname.SVG_dynamic_size_grey"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "size"
+			            },
+			            "Object": {
+			              "Role": "setname.SVG_dynamic_size_grey"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "sizes_have_SVG_dynamic_size_grey"
+			        }
+			      ]
+			    },
+			    "icon_list_has_setname": {
 			      "Binding": {
 			        "ConceptualEntity": "Icon List"
 			      },
 			      "State": "Generated",
 			      "Roles": {
-			        "available_icon": {
+			        "icon_list": {
 			          "Target": {
-			            "Entity": "available_icon"
+			            "Entity": "icon_list"
 			          }
 			        },
 			        "setname": {
@@ -3078,7 +4902,7 @@ cultureInfo en-US
 			        {
 			          "Attribute": {
 			            "Subject": {
-			              "Role": "available_icon"
+			              "Role": "icon_list"
 			            },
 			            "Object": {
 			              "Role": "setname"
@@ -3086,7 +4910,7 @@ cultureInfo en-US
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "available_icons_have_setnames"
+			          "ID": "icon_lists_have_setnames"
 			        },
 			        {
 			          "Attribute": {
@@ -3094,12 +4918,12 @@ cultureInfo en-US
 			              "Role": "setname"
 			            },
 			            "Object": {
-			              "Role": "available_icon"
+			              "Role": "icon_list"
 			            }
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "setnames_have_available_icons"
+			          "ID": "setnames_have_icon_lists"
 			        }
 			      ]
 			    },

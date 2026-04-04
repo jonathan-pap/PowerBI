@@ -7,7 +7,7 @@
     "z": 3000,
     "height": 443.03086997193634,
     "width": 160.4490177736202,
-    "tabOrder": 3000
+    "tabOrder": 1000
   },
   "visual": {
     "visualType": "slicer",
@@ -81,7 +81,7 @@
                           [
                             {
                               "Literal": {
-                                "Value": "'Magenta'"
+                                "Value": "'Tan'"
                               }
                             }
                           ]
@@ -287,23 +287,5 @@
       "filterChanges": true
     },
     "drillFilterOtherVisuals": true
-  },
-  "filterConfig": {
-    "filters": [
-      {
-        "name": "31a6fd0ae921137d0ffb",
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "Color Pallette"
-              }
-            },
-            "Property": "ColorName"
-          }
-        },
-        "type": "Categorical"
-      }
-    ]
   }
 }

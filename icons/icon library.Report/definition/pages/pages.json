@@ -2,7 +2,8 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/pagesMetadata/1.0.0/schema.json",
   "pageOrder": [
     "53785184dcf2a32ab9f8",
-    "c39606818d70a6e45227"
+    "c39606818d70a6e45227",
+    "46355968e59abfd40b48"
   ],
   "activePageName": "53785184dcf2a32ab9f8"
 }

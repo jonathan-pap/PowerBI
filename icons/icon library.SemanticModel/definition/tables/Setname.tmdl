@@ -90,7 +90,7 @@ table Setname
 			// ── Dynamic parameters ──────────────────────────────────────
 			VAR _color = SELECTEDVALUE( 'Color Pallette'[Hex] )
 			//VAR _color     = "#2e7d32"
-			VAR _size      = "24"
+			VAR _size      = "20"
 			
 			// ── Replace currentColor with actual color ──────────────────
 			VAR _coloredPath = SUBSTITUTE( _pathData, "currentColor", _color )
@@ -269,6 +269,178 @@ table Setname
 			    "</svg>"
 			```
 		lineageTag: 210bf3f0-1c66-4b8c-8912-809a00c27146
+		dataCategory: ImageUrl
+
+	measure 'SVG Dynamic Size' = ```
+			
+			VAR _pathData  = MAX( 'Icons'[PathData] )
+			VAR _viewBox   = MAX( 'Icons'[ViewBox] )
+			
+			// ── Dynamic parameters ──────────────────────────────────────
+			VAR _color     = SELECTEDVALUE( 'Color Pallette'[SvgSafe], "%233F51B5" )
+			VAR _size      = MAX( Size[DynamicSize])
+			
+			// ── Replace ALL color references ────────────────────────────
+			/* 
+			    Icons can have colors in three forms:
+			    - fill='currentColor' or stroke='currentColor'
+			    - fill='#HEXHEX' or stroke='#HEXHEX'  (raw hex)
+			    - fill='%23HEXHEX' or stroke='%23HEXHEX' (already escaped)
+			    We normalize all to the selected color.
+			*/
+			VAR _step1 = SUBSTITUTE( _pathData, "currentColor", _color )
+			VAR _step2 = SUBSTITUTE( _step1, "stroke='currentColor'", "stroke='" & _color & "'" )
+			
+			// ── Catch any hardcoded hex colors ──────────────────────────
+			// Replace known defaults: #3F51B5 (indigo), #000, #000000
+			VAR _step3 = SUBSTITUTE( _step2, "%233F51B5", _color )
+			VAR _step4 = SUBSTITUTE( _step3, "%23000000", _color )
+			VAR _step5 = SUBSTITUTE( _step4, "%23000",    _color )
+			
+			// ── Also handle fill='none' stroke scenarios ────────────────
+			// Keep fill='none' as-is, only recolor the stroke
+			VAR _final = SUBSTITUTE( _step5, "stroke='%233F51B5'", "stroke='" & _color & "'" )
+			
+			// ── Build the SVG ───────────────────────────────────────────
+			RETURN
+			    "data:image/svg+xml;utf8, " &
+			    "<svg xmlns='http://www.w3.org/2000/svg'" &
+			    " width='" & _size & "'" &
+			    " height='" & _size & "'" &
+			    " viewBox='" & _viewBox & "'>" &
+			    _final &
+			    "</svg>"
+			```
+		lineageTag: 0e866663-c27e-4b16-8977-219bc68b6df3
+		dataCategory: ImageUrl
+
+	measure 'SVG Dynamic Size White' = ```
+			
+			VAR _pathData  = MAX( 'Icons'[PathData] )
+			VAR _viewBox   = MAX( 'Icons'[ViewBox] )
+			
+			// ── Dynamic parameters ──────────────────────────────────────
+			VAR _color     = SELECTEDVALUE( 'Color Pallette'[SvgSafe], "%233F51B5" )
+			VAR _size      = MAX( Size[DynamicSize])
+			
+			// ── Replace ALL color references ────────────────────────────
+			/* 
+			    Icons can have colors in three forms:
+			    - fill='currentColor' or stroke='currentColor'
+			    - fill='#HEXHEX' or stroke='#HEXHEX'  (raw hex)
+			    - fill='%23HEXHEX' or stroke='%23HEXHEX' (already escaped)
+			    We normalize all to the selected color.
+			*/
+			VAR _step1 = SUBSTITUTE( _pathData, "currentColor", _color )
+			VAR _step2 = SUBSTITUTE( _step1, "stroke='currentColor'", "stroke='" & _color & "'" )
+			
+			// ── Catch any hardcoded hex colors ──────────────────────────
+			// Replace known defaults: #3F51B5 (indigo), #000, #000000
+			VAR _step3 = SUBSTITUTE( _step2, "%233F51B5", _color )
+			VAR _step4 = SUBSTITUTE( _step3, "%23000000", _color )
+			VAR _step5 = SUBSTITUTE( _step4, "%23000",    _color )
+			
+			// ── Also handle fill='none' stroke scenarios ────────────────
+			// Keep fill='none' as-is, only recolor the stroke
+			VAR _final = SUBSTITUTE( _step5, "stroke='%233F51B5'", "stroke='" & _color & "'" )
+			
+			// ── Build the SVG ───────────────────────────────────────────
+			RETURN
+			    "data:image/svg+xml;utf8, " &
+			    "<svg xmlns='http://www.w3.org/2000/svg'" &
+			    " width='" & _size & "'" &
+			    " height='" & _size & "'" &
+			    " viewBox='" & _viewBox & "'>" &
+			    _final &
+			    "</svg>"
+			```
+		lineageTag: 0b1985d2-46fc-4167-9fe4-bd917182c08e
+		dataCategory: ImageUrl
+
+	measure 'SVG Dynamic Size Black' = ```
+			
+			VAR _pathData  = MAX( 'Icons'[PathData] )
+			VAR _viewBox   = MAX( 'Icons'[ViewBox] )
+			
+			// ── Dynamic parameters ──────────────────────────────────────
+			VAR _color     = SELECTEDVALUE( 'Color Pallette'[SvgSafe], "%233F51B5" )
+			VAR _size      = MAX( Size[DynamicSize])
+			
+			// ── Replace ALL color references ────────────────────────────
+			/* 
+			    Icons can have colors in three forms:
+			    - fill='currentColor' or stroke='currentColor'
+			    - fill='#HEXHEX' or stroke='#HEXHEX'  (raw hex)
+			    - fill='%23HEXHEX' or stroke='%23HEXHEX' (already escaped)
+			    We normalize all to the selected color.
+			*/
+			VAR _step1 = SUBSTITUTE( _pathData, "currentColor", _color )
+			VAR _step2 = SUBSTITUTE( _step1, "stroke='currentColor'", "stroke='" & _color & "'" )
+			
+			// ── Catch any hardcoded hex colors ──────────────────────────
+			// Replace known defaults: #3F51B5 (indigo), #000, #000000
+			VAR _step3 = SUBSTITUTE( _step2, "%233F51B5", _color )
+			VAR _step4 = SUBSTITUTE( _step3, "%23000000", _color )
+			VAR _step5 = SUBSTITUTE( _step4, "%23000",    _color )
+			
+			// ── Also handle fill='none' stroke scenarios ────────────────
+			// Keep fill='none' as-is, only recolor the stroke
+			VAR _final = SUBSTITUTE( _step5, "stroke='%233F51B5'", "stroke='" & _color & "'" )
+			
+			// ── Build the SVG ───────────────────────────────────────────
+			RETURN
+			    "data:image/svg+xml;utf8, " &
+			    "<svg xmlns='http://www.w3.org/2000/svg'" &
+			    " width='" & _size & "'" &
+			    " height='" & _size & "'" &
+			    " viewBox='" & _viewBox & "'>" &
+			    _final &
+			    "</svg>"
+			```
+		lineageTag: 40be13a1-62b8-4d71-9c3e-5dfe5568d9e9
+		dataCategory: ImageUrl
+
+	measure 'SVG Dynamic Size Grey' = ```
+			
+			VAR _pathData  = MAX( 'Icons'[PathData] )
+			VAR _viewBox   = MAX( 'Icons'[ViewBox] )
+			
+			// ── Dynamic parameters ──────────────────────────────────────
+			VAR _color     = SELECTEDVALUE( 'Color Pallette'[SvgSafe], "%233F51B5" )
+			VAR _size      = MAX( Size[DynamicSize])
+			
+			// ── Replace ALL color references ────────────────────────────
+			/* 
+			    Icons can have colors in three forms:
+			    - fill='currentColor' or stroke='currentColor'
+			    - fill='#HEXHEX' or stroke='#HEXHEX'  (raw hex)
+			    - fill='%23HEXHEX' or stroke='%23HEXHEX' (already escaped)
+			    We normalize all to the selected color.
+			*/
+			VAR _step1 = SUBSTITUTE( _pathData, "currentColor", _color )
+			VAR _step2 = SUBSTITUTE( _step1, "stroke='currentColor'", "stroke='" & _color & "'" )
+			
+			// ── Catch any hardcoded hex colors ──────────────────────────
+			// Replace known defaults: #3F51B5 (indigo), #000, #000000
+			VAR _step3 = SUBSTITUTE( _step2, "%233F51B5", _color )
+			VAR _step4 = SUBSTITUTE( _step3, "%23000000", _color )
+			VAR _step5 = SUBSTITUTE( _step4, "%23000",    _color )
+			
+			// ── Also handle fill='none' stroke scenarios ────────────────
+			// Keep fill='none' as-is, only recolor the stroke
+			VAR _final = SUBSTITUTE( _step5, "stroke='%233F51B5'", "stroke='" & _color & "'" )
+			
+			// ── Build the SVG ───────────────────────────────────────────
+			RETURN
+			    "data:image/svg+xml;utf8, " &
+			    "<svg xmlns='http://www.w3.org/2000/svg'" &
+			    " width='" & _size & "'" &
+			    " height='" & _size & "'" &
+			    " viewBox='" & _viewBox & "'>" &
+			    _final &
+			    "</svg>"
+			```
+		lineageTag: e3f29732-39f9-4315-b417-93b2068a4761
 		dataCategory: ImageUrl
 
 	column SetName

@@ -1,0 +1,17 @@
+table Size
+	lineageTag: 5cd4bd85-0a4f-4668-9eee-c94e3cc7e69c
+
+	column DynamicSize
+		formatString: 0
+		lineageTag: 441e261a-3cde-4649-971e-59f77aedb4f5
+		summarizeBy: sum
+		sourceColumn: [Value]
+
+		annotation SummarizationSetBy = Automatic
+
+	partition Size = calculated
+		mode: import
+		source = GENERATESERIES(2,256,2)
+
+	annotation PBI_Id = 9054dc2bb0a34a598117857f05343350
+

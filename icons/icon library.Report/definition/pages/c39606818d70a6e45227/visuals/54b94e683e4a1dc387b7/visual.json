@@ -4,18 +4,15 @@
   "position": {
     "x": 253.56725146198829,
     "y": 140.35087719298244,
-    "z": 7000,
+    "z": 6000,
     "height": 39.298245614035082,
     "width": 792.51461988304084,
-    "tabOrder": 4006
+    "tabOrder": 5000
   },
   "visual": {
     "visualType": "advancedSlicerVisual",
     "query": {
       "queryState": {
-        "Label": {
-          "projections": []
-        },
         "Values": {
           "projections": [
             {
@@ -365,7 +362,7 @@
                           [
                             {
                               "Literal": {
-                                "Value": "6L"
+                                "Value": "5L"
                               }
                             }
                           ]
@@ -546,20 +543,6 @@
           ]
         },
         "howCreated": "User"
-      },
-      {
-        "name": "3fae91982c20883d12b7",
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "IconPages"
-              }
-            },
-            "Property": "PageNum"
-          }
-        },
-        "type": "Advanced"
       }
     ]
   }

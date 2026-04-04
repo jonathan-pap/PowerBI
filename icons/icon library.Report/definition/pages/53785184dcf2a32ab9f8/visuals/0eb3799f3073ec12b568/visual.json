@@ -4,7 +4,7 @@
   "position": {
     "x": 856.109906001446,
     "y": 167.51988430947225,
-    "z": 16000,
+    "z": 15000,
     "height": 100.88214027476499,
     "width": 99.956616052060724,
     "tabOrder": 0
@@ -31,6 +31,28 @@
                     }
                   },
                   "Property": "Icon Builders Black"
+                }
+              }
+            },
+            "fit": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Fit'"
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    "visualContainerObjects": {
+      "visualLink": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
                 }
               }
             }

@@ -1,0 +1,17 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.7.0/schema.json",
+  "name": "617e04ded426914bb779",
+  "position": {
+    "x": 0,
+    "y": 67,
+    "z": 19000,
+    "height": 653,
+    "width": 1280,
+    "tabOrder": 21000
+  },
+  "visualGroup": {
+    "displayName": "Letter Search",
+    "groupMode": "ScaleMode"
+  },
+  "isHidden": true
+}

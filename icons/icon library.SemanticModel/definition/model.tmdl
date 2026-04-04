@@ -18,6 +18,7 @@ ref table Setname
 ref table Icons
 ref table 'Color Pallette'
 ref table IconPages
+ref table Size
 
 ref cultureInfo en-US
 

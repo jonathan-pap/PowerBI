@@ -11,7 +11,7 @@
         {
           "location": {
             "x": 766,
-            "y": 125.34375
+            "y": 159.515625
           },
           "nodeIndex": "Setname",
           "nodeLineageTag": "cfc1807e-27dd-4ff9-baec-de8d8cc2cafe",
@@ -24,7 +24,7 @@
         {
           "location": {
             "x": 940,
-            "y": 296.34375
+            "y": 330.515625
           },
           "nodeIndex": "Icons",
           "nodeLineageTag": "6f2e41f7-18d4-4eee-bd0a-13644d077e6b",
@@ -37,7 +37,7 @@
         {
           "location": {
             "x": 402,
-            "y": 252.09375
+            "y": 286.265625
           },
           "nodeIndex": "Color Pallette",
           "size": {
@@ -49,7 +49,7 @@
         {
           "location": {
             "x": 231,
-            "y": 68.34375
+            "y": 102.515625
           },
           "nodeIndex": "Icon List",
           "size": {
@@ -61,11 +61,23 @@
         {
           "location": {
             "x": 993,
-            "y": 208.78125
+            "y": 242.953125
           },
           "nodeIndex": "IconPages",
           "size": {
             "height": 104,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 1046,
+            "y": 172.171875
+          },
+          "nodeIndex": "Size",
+          "size": {
+            "height": 200,
             "width": 234
           },
           "zIndex": 0
