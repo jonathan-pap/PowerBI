@@ -1,0 +1,62 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/page/2.1.0/schema.json",
+  "name": "53785184dcf2a32ab9f8",
+  "displayName": "Icons",
+  "displayOption": "FitToPage",
+  "height": 720,
+  "width": 1280,
+  "objects": {
+    "background": [
+      {
+        "properties": {
+          "color": {
+            "solid": {
+              "color": {
+                "expr": {
+                  "ThemeDataColor": {
+                    "ColorId": 1,
+                    "Percent": 0.1
+                  }
+                }
+              }
+            }
+          },
+          "transparency": {
+            "expr": {
+              "Literal": {
+                "Value": "0D"
+              }
+            }
+          }
+        }
+      }
+    ]
+  },
+  "visualInteractions": [
+    {
+      "source": "d6dfd4743c7ec97ab125",
+      "target": "ded4e3b53ea349d94a1b",
+      "type": "NoFilter"
+    },
+    {
+      "source": "ded4e3b53ea349d94a1b",
+      "target": "52628ffe6307b9207814",
+      "type": "NoFilter"
+    },
+    {
+      "source": "d6dfd4743c7ec97ab125",
+      "target": "c0b4bbb8c0651ce68358",
+      "type": "NoFilter"
+    },
+    {
+      "source": "163d5ec4cab45a247a55",
+      "target": "c0b4bbb8c0651ce68358",
+      "type": "NoFilter"
+    },
+    {
+      "source": "163d5ec4cab45a247a55",
+      "target": "52628ffe6307b9207814",
+      "type": "NoFilter"
+    }
+  ]
+}

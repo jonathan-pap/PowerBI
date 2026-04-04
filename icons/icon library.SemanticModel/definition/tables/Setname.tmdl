@@ -1,0 +1,305 @@
+table Setname
+	lineageTag: cfc1807e-27dd-4ff9-baec-de8d8cc2cafe
+
+	measure 'Icon Builders Black' =
+			
+			VAR _pathData  = MAX( 'Icons'[PathData] )
+			VAR _viewBox   = MAX( 'Icons'[ViewBox] )
+			
+			// ── Dynamic parameters ──────────────────────────────────────
+			VAR _color = SELECTEDVALUE( 'Color Pallette'[Hex] )
+			//VAR _color     = "#2e7d32"
+			VAR _size      = "24"
+			
+			// ── Replace currentColor with actual color ──────────────────
+			VAR _coloredPath = SUBSTITUTE( _pathData, "currentColor", _color )
+			
+			// ── Build the SVG ───────────────────────────────────────────
+			VAR _svg =
+			    "data:image/svg+xml;utf8, " &
+			    "<svg xmlns='http://www.w3.org/2000/svg'" &
+			    " width='" & _size & "'" &
+			    " height='" & _size & "'" &
+			    " viewBox='" & _viewBox & "'>" &
+			    _coloredPath &
+			    "</svg>"
+			RETURN
+			    _svg
+		lineageTag: fb45418e-b328-47cd-bada-39cf93b1a157
+		dataCategory: ImageUrl
+
+	measure 'Icon Builders White' =
+			
+			VAR _pathData  = MAX( 'Icons'[PathData] )
+			VAR _viewBox   = MAX( 'Icons'[ViewBox] )
+			
+			// ── Dynamic parameters ──────────────────────────────────────
+			VAR _color = SELECTEDVALUE( 'Color Pallette'[Hex] )
+			//VAR _color     = "#2e7d32"
+			VAR _size      = "24"
+			
+			// ── Replace currentColor with actual color ──────────────────
+			VAR _coloredPath = SUBSTITUTE( _pathData, "currentColor", _color )
+			
+			// ── Build the SVG ───────────────────────────────────────────
+			VAR _svg =
+			    "data:image/svg+xml;utf8, " &
+			    "<svg xmlns='http://www.w3.org/2000/svg'" &
+			    " width='" & _size & "'" &
+			    " height='" & _size & "'" &
+			    " viewBox='" & _viewBox & "'>" &
+			    _coloredPath &
+			    "</svg>"
+			RETURN
+			    _svg
+		lineageTag: f97fba56-426d-4ad9-bf72-0407b446a7c6
+		dataCategory: ImageUrl
+
+	measure 'Icon Builders Grey' =
+			
+			VAR _pathData  = MAX( 'Icons'[PathData] )
+			VAR _viewBox   = MAX( 'Icons'[ViewBox] )
+			
+			// ── Dynamic parameters ──────────────────────────────────────
+			VAR _color = SELECTEDVALUE( 'Color Pallette'[Hex] )
+			//VAR _color     = "#2e7d32"
+			VAR _size      = "24"
+			
+			// ── Replace currentColor with actual color ──────────────────
+			VAR _coloredPath = SUBSTITUTE( _pathData, "currentColor", _color )
+			
+			// ── Build the SVG ───────────────────────────────────────────
+			VAR _svg =
+			    "data:image/svg+xml;utf8, " &
+			    "<svg xmlns='http://www.w3.org/2000/svg'" &
+			    " width='" & _size & "'" &
+			    " height='" & _size & "'" &
+			    " viewBox='" & _viewBox & "'>" &
+			    _coloredPath &
+			    "</svg>"
+			RETURN
+			    _svg
+		lineageTag: 2c53dcd2-b167-42c4-8c55-cf8749957210
+		dataCategory: ImageUrl
+
+	measure 'Icon Builders s' =
+			
+			VAR _pathData  = MAX( 'Icons'[PathData] )
+			VAR _viewBox   = MAX( 'Icons'[ViewBox] )
+			
+			// ── Dynamic parameters ──────────────────────────────────────
+			VAR _color = SELECTEDVALUE( 'Color Pallette'[Hex] )
+			//VAR _color     = "#2e7d32"
+			VAR _size      = "24"
+			
+			// ── Replace currentColor with actual color ──────────────────
+			VAR _coloredPath = SUBSTITUTE( _pathData, "currentColor", _color )
+			
+			// ── Build the SVG ───────────────────────────────────────────
+			VAR _svg =
+			    "data:image/svg+xml;utf8, " &
+			    "<svg xmlns='http://www.w3.org/2000/svg'" &
+			    " width='" & _size & "'" &
+			    " height='" & _size & "'" &
+			    " viewBox='" & _viewBox & "'>" &
+			    _coloredPath &
+			    "</svg>"
+			RETURN
+			    _svg
+		lineageTag: 8ae4acfc-b0ba-460f-b3a8-171745a97167
+
+	measure 'Icon Count' = DISTINCTCOUNT(Icons[IconName])
+		formatString: #,0
+		lineageTag: 7d207fb4-2493-4d47-9e10-138fd556c4f1
+
+	measure 'Icon Grid' = ```
+			
+			VAR _color       = SELECTEDVALUE( 'Color Pallette'[SvgSafe] )
+			VAR _size        = 24
+			VAR _pad         = 4
+			VAR _boxSize     = _size + (_pad * 2)
+			VAR _gap         = 8
+			VAR _cell        = _boxSize + _gap
+			VAR _cols        = 5
+			VAR _rowsPerPage = 5
+			VAR _perPage     = _cols * _rowsPerPage
+			
+			// ── Pagination ──────────────────────────────────────────────
+			VAR _page        = SELECTEDVALUE( IconPages[PageNumber], 1 )
+			VAR _startIdx    = (_page - 1) * _perPage
+			
+			// ── Get all icons sorted, with an index ─────────────────────
+			VAR _sorted =
+			    TOPN(
+			        _perPage,
+			        FILTER(
+			            ADDCOLUMNS(
+			                SUMMARIZE( 'Icons', 'Icons'[IconName], 'Icons'[PathData], 'Icons'[ViewBox] ),
+			                "@rank",
+			                    RANKX(
+			                        ALLSELECTED( 'Icons' ),
+			                        'Icons'[IconName], , ASC, DENSE
+			                    ) - 1
+			            ),
+			            [@rank] >= _startIdx && [@rank] < _startIdx + _perPage
+			        ),
+			        [@rank], ASC
+			    )
+			
+			// ── Count on this page ──────────────────────────────────────
+			VAR _onPage    = COUNTROWS( _sorted )
+			VAR _gridRows  = CEILING( _onPage / _cols, 1 )
+			VAR _width     = (_cell * _cols) - _gap
+			VAR _gridH     = (_cell * _gridRows) - _gap
+			
+			// ── Prompt when no color selected ───────────────────────────
+			VAR _prompt =
+			    "data:image/svg+xml;utf8, " &
+			    "<svg xmlns='http://www.w3.org/2000/svg' width='" & _width & "' height='32'>" &
+			    "<rect width='" & _width & "' height='32' rx='4' fill='%230D1B33'/>" &
+			    "<text x='" & (_width / 2) & "' y='18' font-family='Segoe UI' font-size='10' " &
+			        "fill='%23C7D0E0' text-anchor='middle'>Select a color</text></svg>"
+			
+			// ── Build icon tiles ────────────────────────────────────────
+			VAR _icons = 
+			    CONCATENATEX(
+			        _sorted,
+			        VAR _localIdx = [@rank] - _startIdx
+			        VAR _col = MOD( _localIdx, _cols )
+			        VAR _row = INT( _localIdx / _cols )
+			        VAR _x = _col * _cell
+			        VAR _y = _row * _cell
+			        VAR _colored = SUBSTITUTE( [PathData], "currentColor", _color )
+			        RETURN
+			            "<rect x='" & _x & "' y='" & _y & 
+			                "' width='" & _boxSize & "' height='" & _boxSize & 
+			                "' rx='3' fill='%23071326' stroke='%231D3152' stroke-width='0.5'/>" &
+			            "<svg x='" & (_x + _pad) & "' y='" & (_y + _pad) & 
+			                "' width='" & _size & "' height='" & _size & 
+			                "' viewBox='" & [ViewBox] & "'>" &
+			                _colored & 
+			            "</svg>",
+			        "",
+			        [@rank], ASC
+			    )
+			
+			VAR _svg =
+			    "data:image/svg+xml;utf8, " &
+			    "<svg xmlns='http://www.w3.org/2000/svg' width='" & _width & "' height='" & _gridH & "'>" &
+			        _icons &
+			    "</svg>"
+			
+			RETURN
+			    IF( ISBLANK( _color ), _prompt, _svg )
+			```
+		lineageTag: 45fb97d0-4f0a-4866-a82d-7935d249ea98
+		dataCategory: ImageUrl
+
+	measure 'In Page'
+		lineageTag: 6221b9e9-7a60-44a0-9fa2-4d3c8998a3f4
+
+	measure 'Show Page' =
+			
+			VAR _perPage    = 12 * 8  // must match your Icon Grid measure
+			VAR _iconCount  = COUNTROWS( ALLSELECTED( 'Icons' ) )
+			VAR _totalPages = CEILING( _iconCount / _perPage, 1 )
+			VAR _thisPage   = SELECTEDVALUE( IconPages[PageNum] )
+			RETURN
+			    IF( _thisPage <= _totalPages, 1, 0 )
+		formatString: 0
+		lineageTag: 539561ec-f0f4-4c44-8008-ef5e97f89ed6
+
+	measure 'Icon Names Grid' = ```
+			
+			VAR _cols        = 5
+			VAR _rowsPerPage = 5
+			VAR _perPage     = _cols * _rowsPerPage
+			VAR _colW        = 120
+			VAR _rowH        = 16
+			
+			// ── Pagination ──────────────────────────────────────────────
+			VAR _page        = SELECTEDVALUE( IconPages[PageNumber], 1 )
+			VAR _startIdx    = (_page - 1) * _perPage
+			
+			// ── Get all icons sorted ────────────────────────────────────
+			VAR _sorted =
+			    TOPN(
+			        _perPage,
+			        FILTER(
+			            ADDCOLUMNS(
+			                SUMMARIZE( 'Icons', 'Icons'[IconName] ),
+			                "@rank",
+			                    RANKX(
+			                        ALLSELECTED( 'Icons' ),
+			                        'Icons'[IconName], , ASC, DENSE
+			                    ) - 1
+			            ),
+			            [@rank] >= _startIdx && [@rank] < _startIdx + _perPage
+			        ),
+			        [@rank], ASC
+			    )
+			
+			// ── Dimensions ──────────────────────────────────────────────
+			VAR _onPage    = COUNTROWS( _sorted )
+			VAR _gridRows  = CEILING( _onPage / _cols, 1 )
+			VAR _width     = _colW * _cols
+			VAR _height    = _rowH * _gridRows
+			
+			// ── Build text grid ─────────────────────────────────────────
+			VAR _names = 
+			    CONCATENATEX(
+			        _sorted,
+			        VAR _localIdx = [@rank] - _startIdx
+			        VAR _col = MOD( _localIdx, _cols )
+			        VAR _row = INT( _localIdx / _cols )
+			        VAR _x = (_col * _colW) + 4
+			        VAR _y = (_row * _rowH) + 12
+			        RETURN
+			            "<text x='" & _x & "' y='" & _y & 
+			                "' font-family='Segoe UI' font-size='9' fill='%23C7D0E0'>" & 
+			                [IconName] & "</text>",
+			        "",
+			        [@rank], ASC
+			    )
+			
+			RETURN
+			    "data:image/svg+xml;utf8, " &
+			    "<svg xmlns='http://www.w3.org/2000/svg' width='" & _width & "' height='" & _height & "'>" &
+			        _names &
+			    "</svg>"
+			```
+		lineageTag: 210bf3f0-1c66-4b8c-8912-809a00c27146
+		dataCategory: ImageUrl
+
+	column SetName
+		dataType: string
+		lineageTag: 5a05763f-5405-40ca-85b0-0ec14303c89f
+		summarizeBy: none
+		sourceColumn: SetName
+
+		annotation SummarizationSetBy = Automatic
+
+	partition Setname = m
+		mode: import
+		source =
+				let
+				    // Get all available icon set prefixes
+				    Collections = Json.Document(
+				        Web.Contents("https://api.iconify.design/collections")
+				    ),
+				
+				    // Convert the record keys to a table
+				    SetNames = Record.FieldNames(Collections),
+				
+				    Result = Table.FromList(
+				        SetNames,
+				        Splitter.SplitByNothing(),
+				        {"SetName"}
+				    )
+				in
+				    Result
+
+	annotation PBI_NavigationStepName = Navigation
+
+	annotation PBI_ResultType = Table
+

@@ -1,0 +1,8 @@
+relationship AutoDetected_0e1fc312-2186-46f4-ac58-4c4313f4c693
+	fromColumn: 'Icon List'.SetName
+	toColumn: Setname.SetName
+
+relationship AutoDetected_d4914ead-0ad0-4cbb-aee0-d0a87a900259
+	fromColumn: Icons.SetName
+	toColumn: Setname.SetName
+

@@ -1,0 +1,84 @@
+expression SelectedIconSet = "mdi" meta [IsParameterQuery=true, ExpressionIdentifier=IconSetList, Type="Text", IsParameterQueryRequired=true]
+	lineageTag: e1a00ca7-7cf7-4cc1-90c8-e3228d6bab29
+
+	annotation PBI_NavigationStepName = Navigation
+
+	annotation PBI_ResultType = Text
+
+expression Svg =
+		let
+		    Source = Table.SelectRows(
+		        #"Icon List",
+		        each [SetName] = SelectedIconSet
+		    ),
+		
+		    AddFullName = Table.AddColumn(
+		        Source, "FullName",
+		        each [SetName] & ":" & [IconName],
+		        type text
+		    ),
+		
+		    AddSVG = Table.AddColumn(
+		        AddFullName, "SVG",
+		        each
+		            try Text.FromBinary(
+		                Web.Contents(
+		                    "https://api.iconify.design/"
+		                    & [SetName] & "/" & [IconName] & ".svg",
+		                    [Query = [height = "24"]]
+		                )
+		            )
+		            otherwise null,
+		        type text
+		    ),
+		
+		    AddDataUrl = Table.AddColumn(
+		        AddSVG, "DataImage",
+		        each if [SVG] <> null
+		            then "data:image/svg+xml;utf8, "
+		                & Text.Replace([SVG], """", "'")
+		            else null,
+		        type text
+		    ),
+		
+		    Final = Table.SelectColumns(
+		        AddDataUrl,
+		        {"SetName", "IconName", "FullName", "DataImage"}
+		    )
+		in
+		    Final
+	lineageTag: 6c784aa7-46b4-4c68-a319-a9b5b18c0e25
+
+	annotation PBI_NavigationStepName = Navigation
+
+	annotation PBI_ResultType = Table
+
+expression IconSetList =
+		let
+		    Source = Table.Column(#"Icon List", "SetName"),
+		    Distinct = List.Distinct(Source),
+		    Sorted = List.Sort(Distinct, Order.Ascending)
+		in
+		    Sorted
+	lineageTag: 56d1b565-ef89-4905-8bcd-3c76e22d8cf9
+
+	annotation PBI_NavigationStepName = Navigation
+
+	annotation PBI_ResultType = List
+
+expression mdi =
+		let
+		    Source = Csv.Document(File.Contents("C:\Users\jonathan\OneDrive\PowerBI\PowerBI\icons\iconify_library\mdi.csv"),[Delimiter=",", Columns=4, Encoding=1252, QuoteStyle=QuoteStyle.None]),
+		    #"Changed Type" = Table.TransformColumnTypes(Source,{{"Column1", type text}, {"Column2", type text}, {"Column3", type text}, {"Column4", type text}}),
+		    #"Promoted Headers" = Table.PromoteHeaders(#"Changed Type", [PromoteAllScalars=true]),
+		    #"Changed Type1" = Table.TransformColumnTypes(#"Promoted Headers",{{"SetName", type text}, {"IconName", type text}, {"FullName", type text}, {"DataImage", type text}}),
+		    #"Duplicated Column" = Table.DuplicateColumn(#"Changed Type1", "DataImage", "DataImage - Copy"),
+		    #"Renamed Columns" = Table.RenameColumns(#"Duplicated Column",{{"DataImage - Copy", "Icon"}})
+		in
+		    #"Renamed Columns"
+	lineageTag: 7445e21f-8fc4-46c4-9ce9-a28625e7f7aa
+
+	annotation PBI_NavigationStepName = Navigation
+
+	annotation PBI_ResultType = Table
+

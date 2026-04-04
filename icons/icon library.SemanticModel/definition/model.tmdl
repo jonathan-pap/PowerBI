@@ -1,0 +1,23 @@
+model Model
+	culture: en-US
+	defaultPowerBIDataSourceVersion: powerBI_V3
+	sourceQueryCulture: en-GB
+	dataAccessOptions
+		fastCombine
+		legacyRedirects
+		returnErrorValuesAsNull
+
+annotation __PBI_TimeIntelligenceEnabled = 0
+
+annotation PBI_QueryOrder = ["Icon List","Svg","SelectedIconSet","IconSetList","mdi","Setname","Icons","Color Pallette","IconPages"]
+
+annotation PBI_ProTooling = ["DevMode"]
+
+ref table 'Icon List'
+ref table Setname
+ref table Icons
+ref table 'Color Pallette'
+ref table IconPages
+
+ref cultureInfo en-US
+

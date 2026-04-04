@@ -1,0 +1,83 @@
+table 'Icon List'
+	lineageTag: ad436641-4088-493c-b755-71a861e3b429
+
+	column SetName
+		dataType: string
+		lineageTag: 8b92d6c4-3b5f-4c3f-9eac-231f9dc3452e
+		summarizeBy: none
+		sourceColumn: SetName
+
+		annotation SummarizationSetBy = Automatic
+
+	column IconName
+		dataType: string
+		lineageTag: 9a4391e5-3923-4faf-984a-404a2c1a28d2
+		summarizeBy: none
+		sourceColumn: IconName
+
+		annotation SummarizationSetBy = Automatic
+
+	partition 'Icon List' = m
+		mode: import
+		source =
+				let
+				    // Get all available icon set prefixes
+				    Collections = Json.Document(
+				        Web.Contents("https://api.iconify.design/collections")
+				    ),
+				
+				    Prefixes = Record.FieldNames(Collections),
+				
+				    // For each icon set, fetch all icon names
+				    GetIconsForSet = (SetName as text) as table =>
+				        let
+				            Source = Json.Document(
+				                Web.Contents(
+				                    "https://api.iconify.design/collection",
+				                    [
+				                        Query = [ prefix = SetName ]
+				                    ]
+				                )
+				            ),
+				
+				            Uncategorized =
+				                if Record.HasFields(Source, "uncategorized")
+				                then Source[uncategorized]
+				                else {},
+				
+				            Categories =
+				                if Record.HasFields(Source, "categories")
+				                then Record.FieldValues(Source[categories])
+				                else {},
+				
+				            CategorizedIcons =
+				                if List.Count(Categories) > 0
+				                then List.Combine(Categories)
+				                else {},
+				
+				            IconNames = List.Distinct(
+				                List.Combine({Uncategorized, CategorizedIcons})
+				            ),
+				
+				            Result =
+				                Table.FromColumns(
+				                    {
+				                        List.Repeat({SetName}, List.Count(IconNames)),
+				                        IconNames
+				                    },
+				                    {"SetName", "IconName"}
+				                )
+				        in
+				            Result,
+				
+				    // Fetch all icon names for all sets
+				    Tables = List.Transform(Prefixes, each GetIconsForSet(_)),
+				
+				    Combined = Table.Combine(Tables)
+				in
+				    Combined
+
+	annotation PBI_NavigationStepName = Navigation
+
+	annotation PBI_ResultType = Table
+

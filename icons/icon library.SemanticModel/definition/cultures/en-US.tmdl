@@ -1,0 +1,3160 @@
+cultureInfo en-US
+
+	linguisticMetadata =
+			{
+			  "Version": "4.1.0",
+			  "Language": "en-US",
+			  "Entities": {
+			    "available_icon": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Icon List"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "available icon": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "AvailableIcons": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "available likeness": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        },
+			        {
+			          "available representation": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        },
+			        {
+			          "available portrait": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        },
+			        {
+			          "available emblem": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        },
+			        {
+			          "available logo": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        },
+			        {
+			          "available image": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.485
+			          }
+			        },
+			        {
+			          "available sign": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.485
+			          }
+			        },
+			        {
+			          "available photograph": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.485
+			          }
+			        },
+			        {
+			          "available drawing": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.485
+			          }
+			        },
+			        {
+			          "available picture": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.485
+			          }
+			        }
+			      ]
+			    },
+			    "available_icon.set_name": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Icon List",
+			          "ConceptualProperty": "SetName"
+			        }
+			      },
+			      "State": "Generated",
+			      "Visibility": {
+			        "Value": "Hidden"
+			      },
+			      "Terms": [
+			        {
+			          "set name": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "SetName": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "set": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "set nickname": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.727
+			          }
+			        },
+			        {
+			          "set title": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.727
+			          }
+			        },
+			        {
+			          "set label": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.727
+			          }
+			        },
+			        {
+			          "set tag": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.727
+			          }
+			        },
+			        {
+			          "usual": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        },
+			        {
+			          "regular": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        },
+			        {
+			          "firm": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.452
+			          }
+			        },
+			        {
+			          "solid": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.452
+			          }
+			        }
+			      ]
+			    },
+			    "available_icon.icon_name": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Icon List",
+			          "ConceptualProperty": "IconName"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "icon name": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "IconName": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "icon nickname": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.727
+			          }
+			        },
+			        {
+			          "icon title": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.727
+			          }
+			        },
+			        {
+			          "icon label": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.727
+			          }
+			        },
+			        {
+			          "icon tag": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.727
+			          }
+			        }
+			      ]
+			    },
+			    "setname": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Setname"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "setname": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "setname.set_name": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Setname",
+			          "ConceptualProperty": "SetName"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "set name": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "SetName": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "set": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "set nickname": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.727
+			          }
+			        },
+			        {
+			          "set title": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.727
+			          }
+			        },
+			        {
+			          "set label": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.727
+			          }
+			        },
+			        {
+			          "set tag": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.727
+			          }
+			        },
+			        {
+			          "usual": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        },
+			        {
+			          "regular": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        },
+			        {
+			          "firm": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.452
+			          }
+			        },
+			        {
+			          "solid": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.452
+			          }
+			        }
+			      ]
+			    },
+			    "setname.icon_builders_black": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Setname",
+			          "ConceptualProperty": "Icon Builders Black"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "icon builders black": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "black": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "builders black": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "dark": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        },
+			        {
+			          "obscure": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        },
+			        {
+			          "dim": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        },
+			        {
+			          "BG Black": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "setname.icon_builders_white": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Setname",
+			          "ConceptualProperty": "Icon Builders White"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "icon builders white": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "white": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "builders white": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "silver": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        },
+			        {
+			          "gray": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        },
+			        {
+			          "greying": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        },
+			        {
+			          "graying": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        },
+			        {
+			          "freezing": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.452
+			          }
+			        },
+			        {
+			          "BG White": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "icon": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Icons"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "icon": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "likeness": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.491
+			          }
+			        },
+			        {
+			          "representation": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.491
+			          }
+			        },
+			        {
+			          "portrait": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.491
+			          }
+			        },
+			        {
+			          "emblem": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.491
+			          }
+			        },
+			        {
+			          "logo": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.491
+			          }
+			        },
+			        {
+			          "sign": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        },
+			        {
+			          "photograph": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        },
+			        {
+			          "drawing": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        },
+			        {
+			          "picture": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        },
+			        {
+			          "symbol": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        }
+			      ]
+			    },
+			    "icon.set_name": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Icons",
+			          "ConceptualProperty": "SetName"
+			        }
+			      },
+			      "State": "Generated",
+			      "Visibility": {
+			        "Value": "Hidden"
+			      },
+			      "Terms": [
+			        {
+			          "set name": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "SetName": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "set": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "set nickname": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.727
+			          }
+			        },
+			        {
+			          "set title": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.727
+			          }
+			        },
+			        {
+			          "set label": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.727
+			          }
+			        },
+			        {
+			          "set tag": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.727
+			          }
+			        },
+			        {
+			          "usual": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        },
+			        {
+			          "regular": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        },
+			        {
+			          "firm": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.452
+			          }
+			        },
+			        {
+			          "solid": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.452
+			          }
+			        }
+			      ]
+			    },
+			    "icon.icon_name": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Icons",
+			          "ConceptualProperty": "IconName"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "icon name": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "name": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "IconName": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "icon nickname": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.727
+			          }
+			        },
+			        {
+			          "icon title": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.727
+			          }
+			        },
+			        {
+			          "icon label": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.727
+			          }
+			        },
+			        {
+			          "icon tag": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.727
+			          }
+			        },
+			        {
+			          "Search Icons": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        },
+			        {
+			          "Icon": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ],
+			      "NameType": "Name"
+			    },
+			    "icon.full_name": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Icons",
+			          "ConceptualProperty": "FullName"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "full name": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "name": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "FullName": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "full nickname": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.727
+			          }
+			        },
+			        {
+			          "full title": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.727
+			          }
+			        },
+			        {
+			          "full label": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.727
+			          }
+			        },
+			        {
+			          "full tag": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.727
+			          }
+			        },
+			        {
+			          "full surname": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.582
+			          }
+			        },
+			        {
+			          "complete name": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.582
+			          }
+			        },
+			        {
+			          "entire name": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.582
+			          }
+			        },
+			        {
+			          "whole name": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.582
+			          }
+			        },
+			        {
+			          "full given name": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.466
+			          }
+			        }
+			      ],
+			      "NameType": "Name"
+			    },
+			    "icon.view_box": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Icons",
+			          "ConceptualProperty": "ViewBox"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "view box": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "ViewBox": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "box": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "view container": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        },
+			        {
+			          "view carton": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        },
+			        {
+			          "view strongbox": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        },
+			        {
+			          "container": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.491
+			          }
+			        },
+			        {
+			          "carton": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.491
+			          }
+			        },
+			        {
+			          "strongbox": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.491
+			          }
+			        },
+			        {
+			          "view case": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.485
+			          }
+			        },
+			        {
+			          "view chest": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.485
+			          }
+			        },
+			        {
+			          "view packet": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.485
+			          }
+			        },
+			        {
+			          "view package": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.485
+			          }
+			        }
+			      ]
+			    },
+			    "icon.path_data": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Icons",
+			          "ConceptualProperty": "PathData"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "path data": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "PathData": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "data": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "path information": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.75
+			          }
+			        },
+			        {
+			          "path fact": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.75
+			          }
+			        },
+			        {
+			          "path info": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.75
+			          }
+			        },
+			        {
+			          "path statistic": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.75
+			          }
+			        },
+			        {
+			          "information": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.736
+			          }
+			        },
+			        {
+			          "fact": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.736
+			          }
+			        },
+			        {
+			          "info": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.736
+			          }
+			        },
+			        {
+			          "statistic": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.736
+			          }
+			        },
+			        {
+			          "path document": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.727
+			          }
+			        },
+			        {
+			          "path figure": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.727
+			          }
+			        }
+			      ]
+			    },
+			    "icon.data_image": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Icons",
+			          "ConceptualProperty": "DataImage"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "data image": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "DataImage": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "image": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "information image": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.6
+			          }
+			        },
+			        {
+			          "fact image": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.6
+			          }
+			        },
+			        {
+			          "info image": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.6
+			          }
+			        },
+			        {
+			          "statistic image": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.6
+			          }
+			        },
+			        {
+			          "document image": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.582
+			          }
+			        },
+			        {
+			          "figure image": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.582
+			          }
+			        },
+			        {
+			          "record image": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.582
+			          }
+			        },
+			        {
+			          "data doppelgänger": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        },
+			        {
+			          "doppelgänger": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.491
+			          }
+			        },
+			        {
+			          "data copy": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.485
+			          }
+			        }
+			      ]
+			    },
+			    "icon.icon": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Icons",
+			          "ConceptualProperty": "Icon"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "icon": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "icon name": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "likeness": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.491
+			          }
+			        },
+			        {
+			          "representation": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.491
+			          }
+			        },
+			        {
+			          "portrait": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.491
+			          }
+			        },
+			        {
+			          "emblem": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.491
+			          }
+			        },
+			        {
+			          "logo": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.491
+			          }
+			        },
+			        {
+			          "sign": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        },
+			        {
+			          "photograph": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        },
+			        {
+			          "drawing": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        },
+			        {
+			          "picture": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        },
+			        {
+			          "symbol": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        }
+			      ],
+			      "NameType": "Name"
+			    },
+			    "color_palette": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Color Pallette"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "color palette": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "color_palette": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "palette": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        }
+			      ]
+			    },
+			    "color_palette.color_name": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Color Pallette",
+			          "ConceptualProperty": "ColorName"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "color name": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "ColorName": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "color": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "color nickname": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.727
+			          }
+			        },
+			        {
+			          "color title": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.727
+			          }
+			        },
+			        {
+			          "color label": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.727
+			          }
+			        },
+			        {
+			          "color tag": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.727
+			          }
+			        },
+			        {
+			          "hue": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.491
+			          }
+			        },
+			        {
+			          "tint": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        },
+			        {
+			          "shade": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        },
+			        {
+			          "dye": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        },
+			        {
+			          "paint": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        },
+			        {
+			          "pigment": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        }
+			      ]
+			    },
+			    "color_palette.hex": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Color Pallette",
+			          "ConceptualProperty": "Hex"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "hex": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "curse": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        },
+			        {
+			          "spell": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        },
+			        {
+			          "jinx": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        },
+			        {
+			          "voodoo": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        },
+			        {
+			          "enchantment": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.466
+			          }
+			        }
+			      ]
+			    },
+			    "color_palette.hex_clean": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Color Pallette",
+			          "ConceptualProperty": "HexClean"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "hex clean": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "HexClean": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "curse clean": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.485
+			          }
+			        },
+			        {
+			          "spell clean": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.485
+			          }
+			        },
+			        {
+			          "jinx clean": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.485
+			          }
+			        },
+			        {
+			          "voodoo clean": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.485
+			          }
+			        },
+			        {
+			          "enchantment clean": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.475
+			          }
+			        }
+			      ]
+			    },
+			    "color_palette.svg_safe": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Color Pallette",
+			          "ConceptualProperty": "SvgSafe"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "svg safe": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "SvgSafe": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        }
+			      ]
+			    },
+			    "color_palette.variant": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Color Pallette",
+			          "ConceptualProperty": "Variant"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "variant": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "irregular": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        },
+			        {
+			          "alternative": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        },
+			        {
+			          "variation": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.466
+			          }
+			        },
+			        {
+			          "deviation": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.466
+			          }
+			        },
+			        {
+			          "modification": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.466
+			          }
+			        },
+			        {
+			          "departure": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.466
+			          }
+			        },
+			        {
+			          "alternate": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.452
+			          }
+			        },
+			        {
+			          "option": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.452
+			          }
+			        }
+			      ]
+			    },
+			    "color_palette.column_1": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Color Pallette",
+			          "ConceptualProperty": "Column1"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "column 1": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "Column1": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        }
+			      ]
+			    },
+			    "setname.icon_builders_grey": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Setname",
+			          "ConceptualProperty": "Icon Builders Grey"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "icon builders grey": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "grey": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "builders grey": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "ancient": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        },
+			        {
+			          "depressing": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.452
+			          }
+			        },
+			        {
+			          "melancholy": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.452
+			          }
+			        },
+			        {
+			          "drab": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.452
+			          }
+			        },
+			        {
+			          "BG Grey": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "setname.icon_builders_s": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Setname",
+			          "ConceptualProperty": "Icon Builders s"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "icon builders s": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "s": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "builders s": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "SVG String": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "icon.letter": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Icons",
+			          "ConceptualProperty": "Letter"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "letter": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "memo": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.491
+			          }
+			        },
+			        {
+			          "epistle": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.491
+			          }
+			        },
+			        {
+			          "notelet": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.491
+			          }
+			        },
+			        {
+			          "missive": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.491
+			          }
+			        },
+			        {
+			          "communication": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        },
+			        {
+			          "dispatch": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        },
+			        {
+			          "message": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        },
+			        {
+			          "note": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        },
+			        {
+			          "document": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        },
+			        {
+			          "correspondence": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        }
+			      ]
+			    },
+			    "setname.icon_count": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Setname",
+			          "ConceptualProperty": "Icon Count"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "icon count": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "icon amount": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.727
+			          }
+			        }
+			      ]
+			    }
+			  },
+			  "Relationships": {
+			    "icon_has_letter": {
+			      "Binding": {
+			        "ConceptualEntity": "Icons"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "icon": {
+			          "Target": {
+			            "Entity": "icon"
+			          }
+			        },
+			        "icon.letter": {
+			          "Target": {
+			            "Entity": "icon.letter"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "icon"
+			            },
+			            "Object": {
+			              "Role": "icon.letter"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "icons_have_letters"
+			        }
+			      ]
+			    },
+			    "color_palette_has_setname_icon_builders_s": {
+			      "Binding": {
+			        "ConceptualEntity": "Color Pallette"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "color_palette": {
+			          "Target": {
+			            "Entity": "color_palette"
+			          }
+			        },
+			        "setname.icon_builders_s": {
+			          "Target": {
+			            "Entity": "setname.icon_builders_s"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "color_palette"
+			            },
+			            "Object": {
+			              "Role": "setname.icon_builders_s"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "color_palettes_have_icon_builders_s"
+			        }
+			      ]
+			    },
+			    "icon_has_setname_icon_builders_s": {
+			      "Binding": {
+			        "ConceptualEntity": "Icons"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "icon": {
+			          "Target": {
+			            "Entity": "icon"
+			          }
+			        },
+			        "setname.icon_builders_s": {
+			          "Target": {
+			            "Entity": "setname.icon_builders_s"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "icon"
+			            },
+			            "Object": {
+			              "Role": "setname.icon_builders_s"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "icons_have_icon_builders_s"
+			        }
+			      ]
+			    },
+			    "color_palette_has_setname_icon_builders_grey": {
+			      "Binding": {
+			        "ConceptualEntity": "Color Pallette"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "color_palette": {
+			          "Target": {
+			            "Entity": "color_palette"
+			          }
+			        },
+			        "setname.icon_builders_grey": {
+			          "Target": {
+			            "Entity": "setname.icon_builders_grey"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "color_palette"
+			            },
+			            "Object": {
+			              "Role": "setname.icon_builders_grey"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "color_palettes_have_icon_builders_grey"
+			        }
+			      ]
+			    },
+			    "icon_has_setname_icon_builders_grey": {
+			      "Binding": {
+			        "ConceptualEntity": "Icons"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "icon": {
+			          "Target": {
+			            "Entity": "icon"
+			          }
+			        },
+			        "setname.icon_builders_grey": {
+			          "Target": {
+			            "Entity": "setname.icon_builders_grey"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "icon"
+			            },
+			            "Object": {
+			              "Role": "setname.icon_builders_grey"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "icons_have_icon_builders_grey"
+			        }
+			      ]
+			    },
+			    "color_palette_has_column_1": {
+			      "Binding": {
+			        "ConceptualEntity": "Color Pallette"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "color_palette": {
+			          "Target": {
+			            "Entity": "color_palette"
+			          }
+			        },
+			        "color_palette.column_1": {
+			          "Target": {
+			            "Entity": "color_palette.column_1"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "color_palette"
+			            },
+			            "Object": {
+			              "Role": "color_palette.column_1"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "color_palettes_have_column_1"
+			        }
+			      ]
+			    },
+			    "color_palette_has_variant": {
+			      "Binding": {
+			        "ConceptualEntity": "Color Pallette"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "color_palette": {
+			          "Target": {
+			            "Entity": "color_palette"
+			          }
+			        },
+			        "color_palette.variant": {
+			          "Target": {
+			            "Entity": "color_palette.variant"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "color_palette"
+			            },
+			            "Object": {
+			              "Role": "color_palette.variant"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "color_palettes_have_variants"
+			        }
+			      ]
+			    },
+			    "color_palette_has_svg_safe": {
+			      "Binding": {
+			        "ConceptualEntity": "Color Pallette"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "color_palette": {
+			          "Target": {
+			            "Entity": "color_palette"
+			          }
+			        },
+			        "color_palette.svg_safe": {
+			          "Target": {
+			            "Entity": "color_palette.svg_safe"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "color_palette"
+			            },
+			            "Object": {
+			              "Role": "color_palette.svg_safe"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "color_palettes_have_svg_safes"
+			        }
+			      ]
+			    },
+			    "color_palette_has_hex_clean": {
+			      "Binding": {
+			        "ConceptualEntity": "Color Pallette"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "color_palette": {
+			          "Target": {
+			            "Entity": "color_palette"
+			          }
+			        },
+			        "color_palette.hex_clean": {
+			          "Target": {
+			            "Entity": "color_palette.hex_clean"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "color_palette"
+			            },
+			            "Object": {
+			              "Role": "color_palette.hex_clean"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "color_palettes_have_hex_clean"
+			        }
+			      ]
+			    },
+			    "color_palette_has_hex": {
+			      "Binding": {
+			        "ConceptualEntity": "Color Pallette"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "color_palette": {
+			          "Target": {
+			            "Entity": "color_palette"
+			          }
+			        },
+			        "color_palette.hex": {
+			          "Target": {
+			            "Entity": "color_palette.hex"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "color_palette"
+			            },
+			            "Object": {
+			              "Role": "color_palette.hex"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "color_palettes_have_hexes"
+			        }
+			      ]
+			    },
+			    "color_palette_has_color_name": {
+			      "Binding": {
+			        "ConceptualEntity": "Color Pallette"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "color_palette": {
+			          "Target": {
+			            "Entity": "color_palette"
+			          }
+			        },
+			        "color_palette.color_name": {
+			          "Target": {
+			            "Entity": "color_palette.color_name"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "color_palette"
+			            },
+			            "Object": {
+			              "Role": "color_palette.color_name"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "color_palettes_have_color_names"
+			        }
+			      ]
+			    },
+			    "icon_has_icon": {
+			      "Binding": {
+			        "ConceptualEntity": "Icons"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "icon": {
+			          "Target": {
+			            "Entity": "icon"
+			          }
+			        },
+			        "icon.icon": {
+			          "Target": {
+			            "Entity": "icon.icon"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "icon"
+			            },
+			            "Object": {
+			              "Role": "icon.icon"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "icons_have_icons"
+			        },
+			        {
+			          "Name": {
+			            "Subject": {
+			              "Role": "icon"
+			            },
+			            "Name": {
+			              "Role": "icon.icon"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "icons_are_names_IDs_of_icons"
+			        }
+			      ]
+			    },
+			    "icon_has_data_image": {
+			      "Binding": {
+			        "ConceptualEntity": "Icons"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "icon": {
+			          "Target": {
+			            "Entity": "icon"
+			          }
+			        },
+			        "icon.data_image": {
+			          "Target": {
+			            "Entity": "icon.data_image"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "icon"
+			            },
+			            "Object": {
+			              "Role": "icon.data_image"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "icons_have_data_images"
+			        }
+			      ]
+			    },
+			    "icon_has_path_data": {
+			      "Binding": {
+			        "ConceptualEntity": "Icons"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "icon": {
+			          "Target": {
+			            "Entity": "icon"
+			          }
+			        },
+			        "icon.path_data": {
+			          "Target": {
+			            "Entity": "icon.path_data"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "icon"
+			            },
+			            "Object": {
+			              "Role": "icon.path_data"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "icons_have_path_data"
+			        }
+			      ]
+			    },
+			    "icon_has_view_box": {
+			      "Binding": {
+			        "ConceptualEntity": "Icons"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "icon": {
+			          "Target": {
+			            "Entity": "icon"
+			          }
+			        },
+			        "icon.view_box": {
+			          "Target": {
+			            "Entity": "icon.view_box"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "icon"
+			            },
+			            "Object": {
+			              "Role": "icon.view_box"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "icons_have_view_boxes"
+			        }
+			      ]
+			    },
+			    "icon_has_full_name": {
+			      "Binding": {
+			        "ConceptualEntity": "Icons"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "icon": {
+			          "Target": {
+			            "Entity": "icon"
+			          }
+			        },
+			        "icon.full_name": {
+			          "Target": {
+			            "Entity": "icon.full_name"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "icon"
+			            },
+			            "Object": {
+			              "Role": "icon.full_name"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "icons_have_full_names"
+			        },
+			        {
+			          "Name": {
+			            "Subject": {
+			              "Role": "icon"
+			            },
+			            "Name": {
+			              "Role": "icon.full_name"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "full_names_are_names_IDs_of_icons"
+			        }
+			      ]
+			    },
+			    "icon_has_icon_name": {
+			      "Binding": {
+			        "ConceptualEntity": "Icons"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "icon": {
+			          "Target": {
+			            "Entity": "icon"
+			          }
+			        },
+			        "icon.icon_name": {
+			          "Target": {
+			            "Entity": "icon.icon_name"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "icon"
+			            },
+			            "Object": {
+			              "Role": "icon.icon_name"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "icons_have_icon_names"
+			        },
+			        {
+			          "Name": {
+			            "Subject": {
+			              "Role": "icon"
+			            },
+			            "Name": {
+			              "Role": "icon.icon_name"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "icon_names_are_names_IDs_of_icons"
+			        }
+			      ]
+			    },
+			    "color_palette_has_setname_icon_builders_white": {
+			      "Binding": {
+			        "ConceptualEntity": "Color Pallette"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "color_palette": {
+			          "Target": {
+			            "Entity": "color_palette"
+			          }
+			        },
+			        "setname.icon_builders_white": {
+			          "Target": {
+			            "Entity": "setname.icon_builders_white"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "color_palette"
+			            },
+			            "Object": {
+			              "Role": "setname.icon_builders_white"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "color_palettes_have_icon_builders_white"
+			        }
+			      ]
+			    },
+			    "icon_has_setname_icon_builders_white": {
+			      "Binding": {
+			        "ConceptualEntity": "Icons"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "icon": {
+			          "Target": {
+			            "Entity": "icon"
+			          }
+			        },
+			        "setname.icon_builders_white": {
+			          "Target": {
+			            "Entity": "setname.icon_builders_white"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "icon"
+			            },
+			            "Object": {
+			              "Role": "setname.icon_builders_white"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "icons_have_icon_builders_white"
+			        }
+			      ]
+			    },
+			    "color_palette_has_setname_icon_builders_black": {
+			      "Binding": {
+			        "ConceptualEntity": "Color Pallette"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "color_palette": {
+			          "Target": {
+			            "Entity": "color_palette"
+			          }
+			        },
+			        "setname.icon_builders_black": {
+			          "Target": {
+			            "Entity": "setname.icon_builders_black"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "color_palette"
+			            },
+			            "Object": {
+			              "Role": "setname.icon_builders_black"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "color_palettes_have_icon_builders_black"
+			        }
+			      ]
+			    },
+			    "icon_has_setname_icon_builders_black": {
+			      "Binding": {
+			        "ConceptualEntity": "Icons"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "icon": {
+			          "Target": {
+			            "Entity": "icon"
+			          }
+			        },
+			        "setname.icon_builders_black": {
+			          "Target": {
+			            "Entity": "setname.icon_builders_black"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "icon"
+			            },
+			            "Object": {
+			              "Role": "setname.icon_builders_black"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "icons_have_icon_builders_black"
+			        }
+			      ]
+			    },
+			    "setname_has_set_name": {
+			      "Binding": {
+			        "ConceptualEntity": "Setname"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "setname": {
+			          "Target": {
+			            "Entity": "setname"
+			          }
+			        },
+			        "setname.set_name": {
+			          "Target": {
+			            "Entity": "setname.set_name"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "setname"
+			            },
+			            "Object": {
+			              "Role": "setname.set_name"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "setnames_have_set_names"
+			        }
+			      ]
+			    },
+			    "available_icon_has_icon_name": {
+			      "Binding": {
+			        "ConceptualEntity": "Icon List"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "available_icon": {
+			          "Target": {
+			            "Entity": "available_icon"
+			          }
+			        },
+			        "available_icon.icon_name": {
+			          "Target": {
+			            "Entity": "available_icon.icon_name"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "available_icon"
+			            },
+			            "Object": {
+			              "Role": "available_icon.icon_name"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "available_icons_have_icon_names"
+			        }
+			      ]
+			    },
+			    "icon_has_setname_icon_count": {
+			      "Binding": {
+			        "ConceptualEntity": "Icons"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "icon": {
+			          "Target": {
+			            "Entity": "icon"
+			          }
+			        },
+			        "setname.icon_count": {
+			          "Target": {
+			            "Entity": "setname.icon_count"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "icon"
+			            },
+			            "Object": {
+			              "Role": "setname.icon_count"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "icons_have_icon_count"
+			        }
+			      ]
+			    },
+			    "available_icon_has_setname": {
+			      "Binding": {
+			        "ConceptualEntity": "Icon List"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "available_icon": {
+			          "Target": {
+			            "Entity": "available_icon"
+			          }
+			        },
+			        "setname": {
+			          "Target": {
+			            "Entity": "setname"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "available_icon"
+			            },
+			            "Object": {
+			              "Role": "setname"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "available_icons_have_setnames"
+			        },
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "setname"
+			            },
+			            "Object": {
+			              "Role": "available_icon"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "setnames_have_available_icons"
+			        }
+			      ]
+			    },
+			    "icon_has_setname": {
+			      "Binding": {
+			        "ConceptualEntity": "Icons"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "icon": {
+			          "Target": {
+			            "Entity": "icon"
+			          }
+			        },
+			        "setname": {
+			          "Target": {
+			            "Entity": "setname"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "icon"
+			            },
+			            "Object": {
+			              "Role": "setname"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "icons_have_setnames"
+			        },
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "setname"
+			            },
+			            "Object": {
+			              "Role": "icon"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "setnames_have_icons"
+			        }
+			      ]
+			    }
+			  },
+			  "Agents": {
+			    "Internal": {
+			      "Version": "1.1.0"
+			    }
+			  }
+			}
+		contentType: json
+

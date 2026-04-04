@@ -1,0 +1,11 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/gitIntegration/platformProperties/2.0.0/schema.json",
+  "metadata": {
+    "type": "SemanticModel",
+    "displayName": "PRISMA"
+  },
+  "config": {
+    "version": "2.0",
+    "logicalId": "1a6ceca3-79c4-44dc-864e-949bbd2cfe85"
+  }
+}

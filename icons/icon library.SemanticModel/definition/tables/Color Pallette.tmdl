@@ -1,0 +1,65 @@
+table 'Color Pallette'
+	lineageTag: 234e9718-1d17-4033-b8ff-5b92736e61ff
+
+	column ColorName
+		dataType: string
+		lineageTag: 1773b79b-10ef-4de8-9de8-cbd729c21f88
+		summarizeBy: none
+		sourceColumn: ColorName
+
+		annotation SummarizationSetBy = Automatic
+
+	column Hex
+		dataType: string
+		lineageTag: 5b68aa5c-af61-405f-bfab-9a62fc96ca83
+		summarizeBy: none
+		sourceColumn: Hex
+
+		annotation SummarizationSetBy = Automatic
+
+	column HexClean
+		dataType: string
+		lineageTag: 3ba96f7b-63f2-438e-a481-a2aadfba4443
+		summarizeBy: none
+		sourceColumn: HexClean
+
+		annotation SummarizationSetBy = Automatic
+
+	column SvgSafe
+		dataType: string
+		lineageTag: ea63b2da-5552-4c94-a900-a47c13b20019
+		summarizeBy: none
+		sourceColumn: SvgSafe
+
+		annotation SummarizationSetBy = Automatic
+
+	column Variant
+		dataType: string
+		lineageTag: f3765e4c-95c8-43df-b818-027bce051956
+		summarizeBy: none
+		sourceColumn: Variant
+
+		annotation SummarizationSetBy = Automatic
+
+	column Column1
+		dataType: string
+		lineageTag: 54ac2a58-b41c-403d-8ce9-8c717d16adc0
+		summarizeBy: none
+		sourceColumn: Column1
+
+		annotation SummarizationSetBy = Automatic
+
+	partition 'Color Pallette' = m
+		mode: import
+		source =
+				let
+				    Source = Csv.Document(File.Contents("C:\Users\jonathan\OneDrive\PowerBI\PowerBI\icons\color_palette.csv"),[Delimiter=",", Columns=6, Encoding=1252, QuoteStyle=QuoteStyle.None]),
+				    #"Promoted Headers" = Table.PromoteHeaders(Source, [PromoteAllScalars=true]),
+				    #"Changed Type" = Table.TransformColumnTypes(#"Promoted Headers",{{"ColorName", type text}, {"Variant", type text}, {"Hex", type text}, {"HexClean", type text}, {"SvgSafe", type text}, {"", type text}})
+				in
+				    #"Changed Type"
+
+	annotation PBI_NavigationStepName = Navigation
+
+	annotation PBI_ResultType = Table
+

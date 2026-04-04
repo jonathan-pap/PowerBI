@@ -1,0 +1,226 @@
+table DIM_Customer
+	lineageTag: 7b434333-f698-4a4b-b0f5-afdd914a6865
+
+	column customer_key
+		dataType: int64
+		isHidden
+		formatString: 0
+		lineageTag: cfa006ae-f97b-4261-b699-3101b659bdd7
+		summarizeBy: none
+		sourceColumn: CustomerKey
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column gender
+		dataType: string
+		lineageTag: 7259f0fe-9bef-4c70-bf5c-d53f7681b7da
+		summarizeBy: none
+		sourceColumn: Gender
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isText":true}
+
+	column name
+		dataType: string
+		lineageTag: 9fa8a6d6-d4f7-4711-b9a0-b8f19f9da613
+		summarizeBy: none
+		sourceColumn: Name
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isText":true}
+
+	column address
+		dataType: string
+		isHidden
+		lineageTag: a414833f-1ad9-41b1-b233-c8c0c56058f7
+		summarizeBy: none
+		sourceColumn: Address
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isText":true}
+
+	column city
+		dataType: string
+		lineageTag: 9b1b71d3-a566-4afe-b235-35c45fef26d2
+		dataCategory: City
+		summarizeBy: none
+		sourceColumn: City
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isText":true}
+
+	column state_code
+		dataType: string
+		isHidden
+		lineageTag: ff91a573-eacc-4d5d-b678-61bee1de07d0
+		summarizeBy: none
+		sourceColumn: State Code
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isText":true}
+
+	column state
+		dataType: string
+		lineageTag: 42189f04-b230-4239-812f-844c00731b7b
+		dataCategory: StateOrProvince
+		summarizeBy: none
+		sourceColumn: State
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isText":true}
+
+	column zip_code
+		dataType: string
+		isHidden
+		lineageTag: eb74c28b-a253-4076-b393-2b30cd2ec647
+		summarizeBy: none
+		sourceColumn: Zip Code
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isText":true}
+
+	column country_code
+		dataType: string
+		isHidden
+		lineageTag: b2fc3024-2f46-4d50-a4c8-b04713427914
+		summarizeBy: none
+		sourceColumn: Country Code
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isText":true}
+
+	column country
+		dataType: string
+		lineageTag: 06eba712-eace-44c6-b3d7-b3739f4e2ab9
+		dataCategory: County
+		summarizeBy: none
+		sourceColumn: Country
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isText":true}
+
+	column continent
+		dataType: string
+		lineageTag: df8d874c-d840-4fc6-930d-0a0fec9a5dd7
+		dataCategory: Continent
+		summarizeBy: none
+		sourceColumn: Continent
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isText":true}
+
+	column birthday
+		dataType: dateTime
+		isHidden
+		formatString: mm/dd/yyyy
+		lineageTag: 3176a742-cb89-4782-ab14-45bea998ee26
+		summarizeBy: none
+		sourceColumn: Birthday
+
+		changedProperty = FormatString
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+		annotation PBI_FormatHint = {"isDateTimeCustom":true}
+
+	column age
+		dataType: int64
+		formatString: 0
+		lineageTag: 5620c72b-b9c9-4816-9c2a-6ccec01044f5
+		summarizeBy: none
+		sourceColumn: Age
+
+		annotation SummarizationSetBy = Automatic
+
+	column age_band =
+			SWITCH(
+			    TRUE(),
+			    DIM_Customer[age] >= 18 && DIM_Customer[age] <= 29, "18-29",
+			    DIM_Customer[age] >= 30 && DIM_Customer[age] <= 44, "30-44",
+			    DIM_Customer[age] >= 45 && DIM_Customer[age] <= 59, "45-59",
+			    DIM_Customer[age] >= 60 && DIM_Customer[age] <= 74, "60-74",
+			    DIM_Customer[age] >= 75,                        "75+",
+			    "Unknown"
+			)
+		dataType: string
+		lineageTag: f31a399b-3bba-4829-91d5-93ac97213394
+		summarizeBy: none
+		sortByColumn: age_band_sort
+
+	column age_band_sort =
+			SWITCH(
+			    TRUE(),
+			    DIM_Customer[age] >= 18 && DIM_Customer[age] <= 29, 1,
+			    DIM_Customer[age] >= 30 && DIM_Customer[age] <= 44, 2,
+			    DIM_Customer[age] >= 45 && DIM_Customer[age] <= 59, 3,
+			    DIM_Customer[age] >= 60 && DIM_Customer[age] <= 74, 4,
+			    DIM_Customer[age] >= 75,                        5,
+			    99
+			)
+		dataType: int64
+		isHidden
+		lineageTag: ad82729f-7e03-4dfe-b04c-3f279087a7e4
+		summarizeBy: none
+
+	/// Four-level geographic drill-down for customer location analysis: Continent → Country → State → City.
+	hierarchy Geography
+		lineageTag: 07ae4e19-8d83-4ed4-99dc-5788344dd674
+
+		/// Top level. Groups customers by continent (e.g. Europe, North America).
+		level Continent
+			lineageTag: 16856cfe-abc2-483c-9bc8-050b30040d1e
+			column: continent
+
+		/// Second level. Full country name within the selected continent.
+		level Country
+			lineageTag: b6eec68e-716e-49b1-9409-e4eea2b5aab7
+			column: country
+
+		/// Third level. State or region within the selected country.
+		level State
+			lineageTag: a741cd5b-f3ca-49ec-83dd-c7220320bb84
+			column: state
+
+		/// Lowest level. City within the selected state.
+		level City
+			lineageTag: d9990c9a-b040-49f3-a8eb-4a74272bbe24
+			column: city
+
+	partition DIM_Customer-bee8b62a-fee2-49b8-a0b6-5518e67a2d59 = m
+		mode: import
+		source =
+				let
+				    Source = Sql.Databases("Demo"),
+				    #"Contoso" = Source{[Name="Contoso V2 1M"]}[Data],
+				    dbo_Customer = #"Contoso"{[Schema="dbo",Item="Customer"]}[Data]
+				in
+				    dbo_Customer
+
+	changedProperty = Name
+
+	annotation PBI_ResultType = Table
+

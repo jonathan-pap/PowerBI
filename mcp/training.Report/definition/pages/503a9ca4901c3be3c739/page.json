@@ -1,0 +1,8 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/page/2.1.0/schema.json",
+  "name": "503a9ca4901c3be3c739",
+  "displayName": "WF - Grid Tile Layout",
+  "displayOption": "FitToPage",
+  "height": 720,
+  "width": 1280
+}

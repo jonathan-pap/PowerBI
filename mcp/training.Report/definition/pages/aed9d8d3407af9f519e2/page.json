@@ -1,0 +1,8 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/page/2.1.0/schema.json",
+  "name": "aed9d8d3407af9f519e2",
+  "displayName": "WF - Master Detail",
+  "displayOption": "FitToPage",
+  "height": 720,
+  "width": 1280
+}

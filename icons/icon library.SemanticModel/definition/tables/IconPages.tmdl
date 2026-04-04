@@ -1,0 +1,34 @@
+table IconPages
+	lineageTag: 864afad9-f73f-4bef-a517-bc5185be5676
+
+	column PageNumber
+		dataType: string
+		lineageTag: b3fb4586-1e9c-456f-9044-05ebc28e3289
+		summarizeBy: none
+		sourceColumn: PageNumber
+
+		annotation SummarizationSetBy = Automatic
+
+	column PageNum = IconPages[PageNumber]
+		dataType: int64
+		formatString: 0
+		lineageTag: ce69b58d-fc70-4b3c-8e96-c677f46ff614
+		summarizeBy: none
+
+		changedProperty = DataType
+
+		annotation SummarizationSetBy = User
+
+	partition IconPages = m
+		mode: import
+		source =
+				let
+				    Source = Table.FromList({1..50}, Splitter.SplitByNothing(), {"PageNumber"}, null, ExtraValues.Error),
+				    Typed = Table.TransformColumnTypes(Source, {{"PageNumber", Int64.Type}})
+				in
+				    Source
+
+	annotation PBI_NavigationStepName = Navigation
+
+	annotation PBI_ResultType = Table
+

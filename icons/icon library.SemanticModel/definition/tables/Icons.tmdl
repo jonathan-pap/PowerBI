@@ -1,0 +1,154 @@
+table Icons
+	lineageTag: 6f2e41f7-18d4-4eee-bd0a-13644d077e6b
+
+	column SetName
+		dataType: string
+		lineageTag: f882bb54-9336-48cd-bd25-b5a9f417169a
+		summarizeBy: none
+		sourceColumn: SetName
+
+		annotation SummarizationSetBy = Automatic
+
+	column IconName
+		dataType: string
+		lineageTag: ed3b580a-45d3-4d17-87c6-8122131b09e1
+		summarizeBy: none
+		sourceColumn: IconName
+
+		annotation SummarizationSetBy = Automatic
+
+	column FullName
+		dataType: string
+		lineageTag: 7cbeb12d-6e08-4034-9379-6b3da11be758
+		summarizeBy: none
+		sourceColumn: FullName
+
+		annotation SummarizationSetBy = Automatic
+
+	column ViewBox
+		dataType: string
+		lineageTag: 4034d357-2062-4bba-ad40-0931ae855123
+		summarizeBy: none
+		sourceColumn: ViewBox
+
+		annotation SummarizationSetBy = Automatic
+
+	column PathData
+		dataType: string
+		lineageTag: 84ff7c99-ec86-4511-a10d-71afd08db786
+		summarizeBy: none
+		sourceColumn: PathData
+
+		annotation SummarizationSetBy = Automatic
+
+	column DataImage
+		dataType: string
+		lineageTag: 5c61320f-00f7-4684-86b7-60c0d2849dfa
+		summarizeBy: none
+		sourceColumn: DataImage
+
+		annotation SummarizationSetBy = Automatic
+
+	column Icon
+		dataType: string
+		lineageTag: 0db01a08-b394-40fc-8ee8-75f37ab8f228
+		summarizeBy: none
+		sourceColumn: Icon
+
+		annotation SummarizationSetBy = Automatic
+
+	column Letter
+		dataType: string
+		lineageTag: dd41d133-2fe6-49cf-b00e-8d7e213185e9
+		summarizeBy: none
+		sourceColumn: Letter
+
+		annotation SummarizationSetBy = Automatic
+
+	column IconRank =
+			
+			RANKX(
+			    'Icons',
+			    'Icons'[IconName], , ASC, DENSE
+			) - 1
+		formatString: 0
+		lineageTag: d7c9fc9f-b6a1-457a-b9bd-1e7e857cde1f
+		summarizeBy: sum
+
+		annotation SummarizationSetBy = Automatic
+
+	partition Icons = m
+		mode: import
+		source =
+				let
+				    // Point to your CSV folder
+				    Source = Folder.Files("C:\Users\jonathan\OneDrive\PowerBI\PowerBI\icons\iconify_library\"),
+				    CsvOnly = Table.SelectRows(Source, each [Extension] = ".csv"),
+				
+				    // Load and combine all CSVs
+				    AddContent = Table.AddColumn(CsvOnly, "Data", each
+				        Csv.Document(
+				            [Content],
+				            [Delimiter = ",", Encoding = TextEncoding.Utf8, QuoteStyle = QuoteStyle.Csv]
+				        )
+				    ),
+				    RemoveOther = Table.SelectColumns(AddContent, {"Data"}),
+				    Expanded = Table.ExpandTableColumn(RemoveOther, "Data",
+				        {"Column1", "Column2", "Column3", "Column4"},
+				        {"SetName", "IconName", "FullName", "DataImage"}
+				    ),
+				    RemoveHeaders = Table.SelectRows(Expanded, each [SetName] <> "SetName"),
+				
+				    // Extract ViewBox from the DataImage string
+				    AddViewBox = Table.AddColumn(
+				        RemoveHeaders, "ViewBox",
+				        each
+				            let
+				                afterVB = Text.AfterDelimiter([DataImage], "viewBox='"),
+				                value = Text.BeforeDelimiter(afterVB, "'")
+				            in
+				                try value otherwise "0 0 24 24",
+				        type text
+				    ),
+				
+				    // Extract PathData (everything between first > after svg tag and </svg>)
+				    AddPathData = Table.AddColumn(
+				        AddViewBox, "PathData",
+				        each
+				            let
+				                // Strip the "data:image/svg+xml;utf8, " prefix first
+				                svgPart = Text.AfterDelimiter([DataImage], "utf8, "),
+				                // Get everything after the opening <svg ...> tag
+				                afterOpen = Text.AfterDelimiter(svgPart, ">"),
+				                // Get everything before </svg>
+				                inner = Text.BeforeDelimiter(afterOpen, "</svg>")
+				            in
+				                try inner otherwise null,
+				        type text
+				    ),
+				
+				    // Duplicate DataImage as Icon for preview column
+				    AddIcon = Table.DuplicateColumn(AddPathData, "DataImage", "Icon"),
+				
+				
+				AddLetter = Table.AddColumn(
+				        AddIcon, "Letter",
+				        each
+				            let
+				                first = Text.Start([IconName], 1)
+				            in
+				                if first >= "0" and first <= "9" then "#" else Text.Upper(first),
+				        type text
+				    ),
+				
+				    Final = Table.SelectColumns(
+				        AddLetter,
+				        {"SetName", "IconName", "FullName", "ViewBox", "PathData", "DataImage", "Icon", "Letter"}
+				    )
+				in
+				    Final
+
+	annotation PBI_NavigationStepName = Navigation
+
+	annotation PBI_ResultType = Table
+
