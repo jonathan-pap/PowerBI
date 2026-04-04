@@ -1,6 +1,6 @@
 # Power BI Report MCP Server
 
-**Version 0.2.1** — An MCP (Model Context Protocol) server that lets AI assistants programmatically create, edit, and format Power BI reports in PBIR format. Works with Claude Desktop, Claude Code, Cursor, Cline, and any MCP-compatible client.
+**Version 0.4.0** — An MCP (Model Context Protocol) server that lets AI assistants programmatically create, edit, and format Power BI reports in PBIR format. Works with Claude Desktop, Claude Code, Cursor, Cline, and any MCP-compatible client.
 
 ---
 
@@ -43,8 +43,6 @@ Settings → Cline → MCP Servers
 
 ### 3. Connect to a report
 
-Once the server is running, use the `set_report` tool:
-
 ```
 Connect to C:\Projects\Sales.Report
 ```
@@ -66,21 +64,26 @@ After changing config or rebuilding, restart the client to pick up the new MCP p
 
 | Tool | Description |
 |------|-------------|
-| `set_report` | Connect to a report at runtime — switch without restarting the server |
+| `set_report` | Connect to a report at runtime — switch without restarting |
 | `get_report` | Show which report is currently connected |
+| `reload_report` | Close and reopen the report in Power BI Desktop |
+| `get_report_settings` | Read report-level settings and theme config |
+| `update_report_settings` | Merge new settings into the report |
 
 ### Page Management
 
 | Tool | Description |
 |------|-------------|
-| `list_pages` | List all pages with IDs, names, sizes, and visual counts |
+| `list_pages` | List all pages with IDs, names, sizes, visual counts, hidden state |
 | `create_page` | Create a new page (name, width, height, display option) |
 | `delete_page` | Delete a page and all its visuals |
 | `rename_page` | Rename an existing page |
-| `duplicate_page` | Clone an entire page including all visuals in one call |
+| `duplicate_page` | Clone an entire page including all visuals |
 | `reorder_pages` | Set the page order |
 | `set_active_page` | Set which page opens by default |
 | `update_page_size` | Change page dimensions and display mode |
+| `set_page_visibility` | Show or hide a page from the navigation pane |
+| `auto_layout` | Arrange all visuals into an automatic grid |
 
 ### Visual Management
 
@@ -101,7 +104,8 @@ After changing config or rebuilding, restart the client to pick up the new MCP p
 |------|-------------|
 | `update_visual_bindings` | Replace data bindings on an existing visual |
 
-Field types: **column** (raw column), **aggregation** (Sum/Avg/Count/Min/Max/Median/etc.), **measure** (DAX measure)
+Field shorthand: `"field": "Table[Column]"` — or use explicit `entity` + `property`.
+Field types: **column** (raw), **aggregation** (Sum/Avg/Count/Min/Max/Median/etc.), **measure** (DAX measure)
 
 ### Formatting
 
@@ -110,85 +114,170 @@ Field types: **column** (raw column), **aggregation** (Sum/Avg/Count/Min/Max/Med
 | `format_visual` | Apply any formatting (axes, legend, labels, borders, background, etc.) |
 | `set_visual_title` | Set title text, font, size, alignment, visibility |
 | `set_datapoint_colors` | Set per-series data point colors |
-| `apply_theme` | Apply a named theme to all visuals on a page in one call |
+| `set_conditional_format` | Rules-based or gradient conditional formatting on background/title color |
+| `apply_theme` | Apply a named theme preset to all visuals on a page |
 
-### Report Settings
-
-| Tool | Description |
-|------|-------------|
-| `get_report_settings` | Read report-level settings and theme config |
-| `update_report_settings` | Merge new settings into the report |
-
-### Layout & Reload
+### Report-Level Themes
 
 | Tool | Description |
 |------|-------------|
-| `auto_layout` | Arrange all visuals into an automatic grid |
-| `reload_report` | Close and reopen the report in Power BI Desktop |
+| `set_report_theme` | Apply a custom JSON theme to the whole report (saved to StaticResources) |
+| `get_report_theme` | Get the current base and custom theme with full JSON content |
+| `remove_report_theme` | Unlink the custom theme (revert to default) |
+| `list_report_themes` | List all theme files stored in StaticResources |
+| `diff_report_theme` | Compare a proposed theme JSON against the current — shows added/removed/changed keys |
+
+### Filters
+
+| Tool | Description |
+|------|-------------|
+| `list_filters` | List all filters on a page or visual |
+| `add_page_filter` | Add a categorical, TopN, or relative date filter to a page |
+| `remove_filter` | Remove a filter by name |
+| `clear_filters` | Remove all filters from a page or visual |
+
+### Bookmarks
+
+| Tool | Description |
+|------|-------------|
+| `list_bookmarks` | List all bookmarks in the report |
+| `add_bookmark` | Create a new bookmark (optionally targeting a page) |
+| `rename_bookmark` | Rename a bookmark |
+| `delete_bookmark` | Delete a bookmark |
 
 ---
 
 ## Batch add_visual
 
-Create multiple visuals in a single tool call using the `visuals` array. Each visual supports inline formatting and data colors.
+Create multiple visuals in a single tool call using the `visuals` array. Each visual supports inline `containerFormat`, `visualFormat`, and `dataColors`.
 
 ```json
 {
   "pageId": "abc123",
   "visuals": [
     {
+      "visualType": "shape",
+      "x": 10, "y": 10, "width": 1260, "height": 40,
+      "shapeType": "rectangle",
+      "fillColor": "#1F3864",
+      "textContent": "Sales Dashboard",
+      "textColor": "#FFFFFF",
+      "textBold": true,
+      "textSize": 14,
+      "textAlign": "center"
+    },
+    {
       "visualType": "card",
-      "x": 30, "y": 45, "width": 250, "height": 90,
-      "bindings": [{ "bucket": "Values", "field": "measure", "table": "Sales", "column": "Total Revenue" }],
-      "containerFormat": [
-        { "category": "background", "properties": { "color": "#1A1035" } },
-        { "category": "border", "properties": { "color": "#7B68AE" } }
+      "x": 10, "y": 60, "width": 300, "height": 100,
+      "title": "Gross Sales",
+      "bindings": [
+        { "bucket": "Values", "fields": [{ "field": "financials[Gross Sales]", "type": "aggregation", "aggregation": "Sum" }] }
       ]
     },
     {
       "visualType": "lineChart",
-      "x": 30, "y": 150, "width": 600, "height": 250,
+      "x": 10, "y": 170, "width": 620, "height": 240,
+      "title": "Sales by Month",
       "bindings": [
-        { "bucket": "Category", "field": "column", "table": "Date", "column": "Month" },
-        { "bucket": "Y", "field": "measure", "table": "Sales", "column": "Revenue" }
+        { "bucket": "Category", "fields": [{ "field": "Date[Month]", "type": "column" }] },
+        { "bucket": "Y",        "fields": [{ "field": "Sales[Revenue]", "type": "measure" }] }
       ],
       "visualFormat": [
-        { "category": "categoryAxis", "properties": { "labelColor": "#E0D8F0" } },
-        { "category": "valueAxis", "properties": { "gridlineColor": "#2D2250" } }
+        { "category": "categoryAxis", "properties": { "labelColor": "#333333" } }
       ],
-      "dataColors": [{ "color": "#B8A9E8" }, { "color": "#9DB5F5" }]
+      "dataColors": [{ "color": "#0078D4" }]
     }
   ]
 }
 ```
 
-Single visual (original syntax still works):
+---
+
+## Conditional Formatting (`set_conditional_format`)
+
+Apply data-driven background or title color to a visual:
+
+**Rules-based** (green if profit > 0, red otherwise):
 ```json
 {
   "pageId": "abc123",
-  "visualType": "card",
-  "x": 30, "y": 45, "width": 250, "height": 90
+  "visualId": "xyz",
+  "property": "background",
+  "formatType": "rules",
+  "entity": "financials",
+  "property2": "Profit",
+  "isMeasure": false,
+  "rules": [
+    { "comparisonKind": 1, "value": 0, "color": "#00B050" }
+  ],
+  "defaultColor": "#FF0000"
 }
+```
+
+**Gradient** (white → blue scale):
+```json
+{
+  "formatType": "gradient",
+  "entity": "Sales", "property2": "Total",
+  "minColor": "#FFFFFF", "maxColor": "#0078D4"
+}
+```
+
+ComparisonKind: `0`=Equal, `1`=GT, `2`=GTE, `3`=LT, `4`=LTE, `5`=NotEqual
+
+---
+
+## Page-Level Filters (`add_page_filter`)
+
+**Categorical** — include specific values:
+```json
+{ "pageId": "abc", "filterType": "categorical", "entity": "Store", "property": "Region", "values": ["East", "West"] }
+```
+
+**TopN** — top 10 products by revenue:
+```json
+{ "pageId": "abc", "filterType": "topN", "entity": "Product", "property": "Name", "n": 10, "topNDirection": "Top", "orderByEntity": "Sales", "orderByProperty": "Revenue", "orderByIsMeasure": true }
+```
+
+**Relative date** — last 12 months:
+```json
+{ "pageId": "abc", "filterType": "relativeDate", "entity": "Date", "property": "Date", "period": "months", "count": 12, "dateDirection": "last" }
 ```
 
 ---
 
-## Themes (`apply_theme`)
+## Report-Level Themes (`set_report_theme`)
 
-Apply a full page style in one call. Themes set backgrounds, borders, and data colors on every visual.
+Applies globally to all visuals — no individual visual files are touched:
 
-| Theme | Background | Borders | Data Colors |
-|-------|-----------|---------|-------------|
-| `dark` | `#161B22` (near-black) | `#30363D` (dark grey) | GitHub-style blues/greens |
-| `light` | `#FFFFFF` (white) | `#E0E0E0` (light grey) | Soft blues/teals |
-| `corporate` | `#FFFFFF` (white) | `#D1D5DB` (slate grey) | Professional blues |
-| `blue-purple` | `#FFFFFF` (white) | `#6C63FF` (indigo) | Purple/violet palette |
+```json
+{
+  "name": "Corporate Brand",
+  "dataColors": ["#0078D4", "#00BCF2", "#00B294", "#FF8C00", "#E81123"],
+  "background": "#FFFFFF",
+  "foreground": "#1F3864",
+  "tableAccent": "#0078D4"
+}
+```
+
+Theme files are saved to `StaticResources/RegisteredResources/` and wired into `report.json` automatically.
+
+---
+
+## Page Themes (`apply_theme`)
+
+Apply a preset to all visuals on one page:
+
+| Theme | Style |
+|-------|-------|
+| `dark` | Near-black background, GitHub-style blues/greens |
+| `light` | White background, soft blues |
+| `corporate` | White background, professional blues |
+| `blue-purple` | White background, indigo/violet palette |
 
 ```json
 { "pageId": "abc123", "theme": "dark", "applyDataColors": true }
 ```
-
-After applying a theme, use `format_visual` to fine-tune individual visuals.
 
 ---
 
@@ -199,6 +288,7 @@ After applying a theme, use `format_visual` to fine-tune individual visuals.
 | Type | Data Buckets |
 |------|-------------|
 | `barChart` | Category, Y, Series, Gradient |
+| `stackedBarChart` | Category, Y, Series |
 | `clusteredBarChart` | Category, Y, Series, Gradient |
 | `hundredPercentStackedBarChart` | Category, Y, Series |
 | `columnChart` | Category, Y, Series, Gradient |
@@ -208,20 +298,21 @@ After applying a theme, use `format_visual` to fine-tune individual visuals.
 | `areaChart` | Category, Y, Y2, Series |
 | `stackedAreaChart` | Category, Y, Series |
 | `hundredPercentStackedAreaChart` | Category, Y, Series |
-| `lineClusteredColumnComboChart` | Category, Y, Y2, Series |
-| `lineStackedColumnComboChart` | Category, Y, Y2, Series |
+| `lineClusteredColumnComboChart` | Category, ColumnY, LineY, Series |
+| `lineStackedColumnComboChart` | Category, ColumnY, LineY, Series |
 | `ribbonChart` | Category, Y, Series |
 | `waterfallChart` | Category, Y, Breakdown |
-| `scatterChart` | Category, X, Y, Size, Series |
+| `scatterChart` | Details, X, Y, Size, Series |
 | `pieChart` | Category, Y, Series |
 | `donutChart` | Category, Y, Series |
-| `funnel` | Category, Y |
+| `funnelChart` | Category, Y |
 | `treemap` | Group, Values, Details |
 
 ### Maps
 
 | Type | Data Buckets |
 |------|-------------|
+| `azureMap` | Location, Size, Legend |
 | `map` | Category, Size, Series |
 | `filledMap` | Location, Legend, Values |
 
@@ -237,6 +328,7 @@ After applying a theme, use `format_visual` to fine-tune individual visuals.
 | Type | Data Buckets |
 |------|-------------|
 | `card` | Values |
+| `cardNew` | Values |
 | `cardVisual` | Data, Rows |
 | `multiRowCard` | Values |
 | `kpi` | Indicator, TrendLine, Goal |
@@ -246,20 +338,21 @@ After applying a theme, use `format_visual` to fine-tune individual visuals.
 
 | Type | Data Buckets | Notes |
 |------|-------------|-------|
-| `slicer` | Values | `Basic` (list) or `Dropdown` mode, vertical/horizontal |
-| `listSlicer` | Values | |
-| `textSlicer` | Values | |
-| `advancedSlicerVisual` | Values | |
+| `slicer` | Values | `Basic` (list) or `Dropdown` mode |
+| `listSlicer` | Values | Always-expanded checkbox list |
+| `textSlicer` | Values | Free-text search box |
+| `advancedSlicerVisual` | Values | Range / between slicer |
 
-### Other
+### Decorative & Navigation
 
 | Type | Notes |
 |------|-------|
-| `textbox` | Set text via `textContent` parameter |
-| `shape` | Rectangle, rounded rectangle, line, tab shapes |
+| `textbox` | Set text via `textContent` |
+| `shape` | rectangle, rectangleRounded, line, tab variants |
 | `basicShape` | |
 | `image` | |
 | `actionButton` | |
+| `pageNavigator` | |
 | `decompositionTreeVisual` | Buckets: Analyze, ExplainBy |
 
 ---
@@ -292,27 +385,71 @@ After applying a theme, use `format_visual` to fine-tune individual visuals.
 | `header` | `show`, `fontFamily`, `textSize` | Slicer |
 | `items` | `fontFamily`, `textSize` | Slicer |
 
-### Color Handling
+Hex colors starting with `#` are automatically wrapped in PBIR format.
 
-Hex colors starting with `#` are automatically wrapped in PBIR format — just pass `"#4A90D9"`.
+---
 
-### Per-Series Colors (`set_datapoint_colors`)
+## PBIR Folder Structure
 
-```json
-{
-  "colors": [
-    { "color": "#B8A9E8" },
-    { "color": "#9DB5F5" },
-    { "color": "#87BFFF", "seriesName": "financials.Country" }
-  ]
-}
 ```
+MyProject.Report/
+  definition/
+    report.json              # Report settings, theme config, resourcePackages
+    version.json             # Format version
+    pages/
+      pages.json             # Page order and active page
+      {pageId}/
+        page.json            # Page name, size, visibility, filters
+        visuals/
+          {visualId}/
+            visual.json      # Visual type, position, bindings, formatting
+    bookmarks/
+      bookmarks.json         # Bookmark order
+      {bookmarkId}/
+        bookmark.json        # Bookmark state
+  StaticResources/
+    RegisteredResources/     # Custom theme JSON files
+  definition.pbir            # Semantic model reference
+```
+
+Key rules:
+- `visualContainerObjects` (title, background, border) goes **inside** the `visual` object
+- `objects` (axes, legend, labels) also goes **inside** the `visual` object
+- Color format: `{ solid: { color: { expr: { Literal: { Value: "'#XXXXXX'" } } } } }`
+- Numbers use `D` suffix (handled automatically by the server)
+
+---
+
+## Example: Build a Dashboard in Minimal Calls
+
+```
+1. set_report          → connect to target .Report
+2. create_page         → "Sales Dashboard" (1280×720)
+3. add_visual (batch)  → shapes (wireframe) first, then data visuals on top
+4. set_report_theme    → apply brand colors globally
+5. add_page_filter     → optional: last 12 months relative date filter
+6. reload_report       → open in Power BI Desktop
+```
+
+A typical 10-visual dashboard can be built in **4–6 tool calls** using batch mode.
+
+---
+
+## Tips
+
+- Always read the semantic model first (`powerbi-modeling-mcp`) to get exact table/column names before binding
+- Use `set_report` to switch between reports mid-session without restarting
+- Add wireframe shapes **before** data visuals so z-order is correct
+- Use `Table[Column]` shorthand in bindings: `"field": "financials[Gross Sales]"`
+- `duplicate_page` clones an entire page with all visuals — great for template pages
+- `set_report_theme` applies globally; `apply_theme` applies per-page presets
+- `format_visual` merges with existing formatting — safe to call incrementally
+- `set_page_visibility: hidden=true` for drillthrough pages
+- All tools return `{ success: false, error: "..." }` on failure — the server never crashes
 
 ---
 
 ## Connecting Other AI Models
-
-The server is a standard MCP stdio process — any MCP-compatible client can use it.
 
 | Client | Config location |
 |--------|----------------|
@@ -322,53 +459,4 @@ The server is a standard MCP stdio process — any MCP-compatible client can use
 | Cline (VS Code) | Settings → Cline → MCP Servers |
 | Continue.dev | `~/.continue/config.json` |
 
-For models without native MCP support (GPT-4, Gemini), use `mcp-proxy` to expose the server over HTTP/SSE, then connect via OpenAI function-calling.
-
----
-
-## PBIR Format Overview
-
-```
-MyProject.Report/
-  definition/
-    report.json        # Report settings, themes
-    version.json       # Format version
-    pages/
-      pages.json       # Page order and active page
-      {pageId}/
-        page.json      # Page name, size, display option
-        visuals/
-          {visualId}/
-            visual.json  # Visual type, data, formatting
-```
-
-Key rules:
-- `visualContainerObjects` (title, background, border) goes **inside** the `visual` object
-- `objects` (axes, legend, labels) also goes **inside** the `visual` object
-- Color format: `{ solid: { color: { expr: { Literal: { Value: "'#XXXXXX'" } } } } }`
-- Numbers use `D` suffix for decimals, `L` for integers (handled automatically by the server)
-
----
-
-## Example: Build a Dashboard in Minimal Calls
-
-```
-1. set_report          → connect to target .Report
-2. create_page         → "Sales Dashboard" (1280x720)
-3. add_visual (batch)  → all visuals with inline formatting + data colors
-4. apply_theme         → page-wide dark/light/corporate style
-5. reload_report       → open in Power BI Desktop
-```
-
-A typical 10-visual dashboard can be built in **4–6 tool calls** using batch mode.
-
----
-
-## Tips
-
-- Use `set_report` to switch between reports mid-session without restarting
-- `duplicate_page` clones an entire page with all visuals — great for theme variants
-- `apply_theme` then `format_visual` for fine-tuning is the fastest styling workflow
-- `auto_layout` arranges visuals into a grid, then use `move_visual` to tweak
-- `format_visual` merges with existing formatting — safe to call incrementally
-- All tools return `{ success: false, error: "..." }` on failure — the server never crashes
+For models without native MCP support, use `mcp-proxy` to expose the server over HTTP/SSE.
