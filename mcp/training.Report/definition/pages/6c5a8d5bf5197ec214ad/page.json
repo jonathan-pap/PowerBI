@@ -1,0 +1,8 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/page/2.1.0/schema.json",
+  "name": "6c5a8d5bf5197ec214ad",
+  "displayName": "Training 2",
+  "displayOption": "FitToPage",
+  "height": 720,
+  "width": 1280
+}
