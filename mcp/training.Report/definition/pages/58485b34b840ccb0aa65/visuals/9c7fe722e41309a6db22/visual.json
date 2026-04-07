@@ -1,34 +1,20 @@
 {
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.7.0/schema.json",
-  "name": "643912fb53add53e3915",
+  "name": "9c7fe722e41309a6db22",
   "position": {
-    "x": 840,
-    "y": 420,
-    "z": 10000,
-    "height": 290,
-    "width": 430,
-    "tabOrder": 10000
+    "x": 10,
+    "y": 60,
+    "z": 2000,
+    "height": 100,
+    "width": 300,
+    "tabOrder": 2000
   },
   "visual": {
-    "visualType": "tableEx",
+    "visualType": "card",
     "query": {
       "queryState": {
         "Values": {
           "projections": [
-            {
-              "field": {
-                "Column": {
-                  "Expression": {
-                    "SourceRef": {
-                      "Entity": "financials"
-                    }
-                  },
-                  "Property": "Country"
-                }
-              },
-              "queryRef": "financials.Country",
-              "nativeQueryRef": "Country"
-            },
             {
               "field": {
                 "Aggregation": {
@@ -47,29 +33,32 @@
               },
               "queryRef": "Sum(financials.Sales)",
               "nativeQueryRef": "Sum of Sales"
-            },
-            {
-              "field": {
-                "Aggregation": {
-                  "Expression": {
-                    "Column": {
-                      "Expression": {
-                        "SourceRef": {
-                          "Entity": "financials"
-                        }
-                      },
-                      "Property": "Profit"
-                    }
-                  },
-                  "Function": 0
-                }
-              },
-              "queryRef": "Sum(financials.Profit)",
-              "nativeQueryRef": "Sum of Profit"
             }
           ]
         }
       }
+    },
+    "objects": {
+      "labels": [
+        {
+          "properties": {
+            "fontSize": {
+              "expr": {
+                "Literal": {
+                  "Value": "8D"
+                }
+              }
+            },
+            "fontFamily": {
+              "expr": {
+                "Literal": {
+                  "Value": "''Segoe UI', wf_segoe-ui_normal, helvetica, arial, sans-serif'"
+                }
+              }
+            }
+          }
+        }
+      ]
     },
     "visualContainerObjects": {
       "title": [
@@ -78,7 +67,7 @@
             "text": {
               "expr": {
                 "Literal": {
-                  "Value": "'Country Detail'"
+                  "Value": "'Total Sales $'"
                 }
               }
             },
@@ -109,6 +98,17 @@
                 }
               }
             },
+            "color": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "Literal": {
+                      "Value": "'#F7F9FC'"
+                    }
+                  }
+                }
+              }
+            },
             "transparency": {
               "expr": {
                 "Literal": {
@@ -134,7 +134,7 @@
                 "color": {
                   "expr": {
                     "Literal": {
-                      "Value": "'#D1D5DB'"
+                      "Value": "'#1F3864'"
                     }
                   }
                 }
@@ -203,21 +203,7 @@
   "filterConfig": {
     "filters": [
       {
-        "name": "23d2367939e1084ca9c9",
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "financials"
-              }
-            },
-            "Property": "Country"
-          }
-        },
-        "type": "Categorical"
-      },
-      {
-        "name": "fd5de41796b55f0f2c0e",
+        "name": "60a0d328e4ced35d42e2",
         "field": {
           "Aggregation": {
             "Expression": {
@@ -228,25 +214,6 @@
                   }
                 },
                 "Property": "Sales"
-              }
-            },
-            "Function": 0
-          }
-        },
-        "type": "Advanced"
-      },
-      {
-        "name": "4bd9d66ee7d0af3e82be",
-        "field": {
-          "Aggregation": {
-            "Expression": {
-              "Column": {
-                "Expression": {
-                  "SourceRef": {
-                    "Entity": "financials"
-                  }
-                },
-                "Property": "Profit"
               }
             },
             "Function": 0

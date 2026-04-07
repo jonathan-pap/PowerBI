@@ -1,19 +1,19 @@
 {
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.7.0/schema.json",
-  "name": "643912fb53add53e3915",
+  "name": "f5cfa71badc537828724",
   "position": {
-    "x": 840,
+    "x": 425,
     "y": 420,
-    "z": 10000,
+    "z": 9000,
     "height": 290,
-    "width": 430,
-    "tabOrder": 10000
+    "width": 405,
+    "tabOrder": 9000
   },
   "visual": {
-    "visualType": "tableEx",
+    "visualType": "pieChart",
     "query": {
       "queryState": {
-        "Values": {
+        "Category": {
           "projections": [
             {
               "field": {
@@ -23,12 +23,17 @@
                       "Entity": "financials"
                     }
                   },
-                  "Property": "Country"
+                  "Property": "Product"
                 }
               },
-              "queryRef": "financials.Country",
-              "nativeQueryRef": "Country"
-            },
+              "queryRef": "financials.Product",
+              "nativeQueryRef": "Product",
+              "active": true
+            }
+          ]
+        },
+        "Y": {
+          "projections": [
             {
               "field": {
                 "Aggregation": {
@@ -47,29 +52,162 @@
               },
               "queryRef": "Sum(financials.Sales)",
               "nativeQueryRef": "Sum of Sales"
-            },
-            {
-              "field": {
-                "Aggregation": {
-                  "Expression": {
-                    "Column": {
-                      "Expression": {
-                        "SourceRef": {
-                          "Entity": "financials"
-                        }
-                      },
-                      "Property": "Profit"
-                    }
-                  },
-                  "Function": 0
-                }
-              },
-              "queryRef": "Sum(financials.Profit)",
-              "nativeQueryRef": "Sum of Profit"
             }
           ]
         }
+      },
+      "sortDefinition": {
+        "sort": [
+          {
+            "field": {
+              "Column": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "financials"
+                  }
+                },
+                "Property": "Product"
+              }
+            },
+            "direction": "Ascending"
+          }
+        ],
+        "isDefaultSort": true
       }
+    },
+    "objects": {
+      "labels": [
+        {
+          "properties": {
+            "fontSize": {
+              "expr": {
+                "Literal": {
+                  "Value": "8D"
+                }
+              }
+            },
+            "fontFamily": {
+              "expr": {
+                "Literal": {
+                  "Value": "''Segoe UI', wf_segoe-ui_normal, helvetica, arial, sans-serif'"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "legend": [
+        {
+          "properties": {
+            "fontSize": {
+              "expr": {
+                "Literal": {
+                  "Value": "8D"
+                }
+              }
+            },
+            "fontFamily": {
+              "expr": {
+                "Literal": {
+                  "Value": "''Segoe UI', wf_segoe-ui_normal, helvetica, arial, sans-serif'"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "dataPoint": [
+        {
+          "properties": {
+            "fill": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "Literal": {
+                      "Value": "'#1F3864'"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        {
+          "properties": {
+            "fill": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "Literal": {
+                      "Value": "'#2E75B6'"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        {
+          "properties": {
+            "fill": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "Literal": {
+                      "Value": "'#4BACC6'"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        {
+          "properties": {
+            "fill": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "Literal": {
+                      "Value": "'#70AD47'"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        {
+          "properties": {
+            "fill": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "Literal": {
+                      "Value": "'#FFC000'"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        {
+          "properties": {
+            "fill": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "Literal": {
+                      "Value": "'#FF7043'"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      ]
     },
     "visualContainerObjects": {
       "title": [
@@ -78,7 +216,7 @@
             "text": {
               "expr": {
                 "Literal": {
-                  "Value": "'Country Detail'"
+                  "Value": "'Sales by Product'"
                 }
               }
             },
@@ -106,6 +244,17 @@
               "expr": {
                 "Literal": {
                   "Value": "true"
+                }
+              }
+            },
+            "color": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "Literal": {
+                      "Value": "'#FFFFFF'"
+                    }
+                  }
                 }
               }
             },
@@ -203,7 +352,7 @@
   "filterConfig": {
     "filters": [
       {
-        "name": "23d2367939e1084ca9c9",
+        "name": "8ccdee826d4a3590975d",
         "field": {
           "Column": {
             "Expression": {
@@ -211,13 +360,13 @@
                 "Entity": "financials"
               }
             },
-            "Property": "Country"
+            "Property": "Product"
           }
         },
         "type": "Categorical"
       },
       {
-        "name": "fd5de41796b55f0f2c0e",
+        "name": "f477fef1c587bb11ef94",
         "field": {
           "Aggregation": {
             "Expression": {
@@ -228,25 +377,6 @@
                   }
                 },
                 "Property": "Sales"
-              }
-            },
-            "Function": 0
-          }
-        },
-        "type": "Advanced"
-      },
-      {
-        "name": "4bd9d66ee7d0af3e82be",
-        "field": {
-          "Aggregation": {
-            "Expression": {
-              "Column": {
-                "Expression": {
-                  "SourceRef": {
-                    "Entity": "financials"
-                  }
-                },
-                "Property": "Profit"
               }
             },
             "Function": 0

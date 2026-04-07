@@ -1,19 +1,19 @@
 {
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.7.0/schema.json",
-  "name": "643912fb53add53e3915",
+  "name": "027b2bac66b357399f5c",
   "position": {
-    "x": 840,
-    "y": 420,
-    "z": 10000,
-    "height": 290,
-    "width": 430,
-    "tabOrder": 10000
+    "x": 650,
+    "y": 60,
+    "z": 4000,
+    "height": 280,
+    "width": 280,
+    "tabOrder": 4000
   },
   "visual": {
-    "visualType": "tableEx",
+    "visualType": "ribbonChart",
     "query": {
       "queryState": {
-        "Values": {
+        "Category": {
           "projections": [
             {
               "field": {
@@ -23,12 +23,17 @@
                       "Entity": "financials"
                     }
                   },
-                  "Property": "Country"
+                  "Property": "Month Name"
                 }
               },
-              "queryRef": "financials.Country",
-              "nativeQueryRef": "Country"
-            },
+              "queryRef": "financials.Month Name",
+              "nativeQueryRef": "Month Name",
+              "active": true
+            }
+          ]
+        },
+        "Y": {
+          "projections": [
             {
               "field": {
                 "Aggregation": {
@@ -47,30 +52,48 @@
               },
               "queryRef": "Sum(financials.Sales)",
               "nativeQueryRef": "Sum of Sales"
-            },
+            }
+          ]
+        },
+        "Series": {
+          "projections": [
             {
               "field": {
-                "Aggregation": {
+                "Column": {
                   "Expression": {
-                    "Column": {
-                      "Expression": {
-                        "SourceRef": {
-                          "Entity": "financials"
-                        }
-                      },
-                      "Property": "Profit"
+                    "SourceRef": {
+                      "Entity": "financials"
                     }
                   },
-                  "Function": 0
+                  "Property": "Segment"
                 }
               },
-              "queryRef": "Sum(financials.Profit)",
-              "nativeQueryRef": "Sum of Profit"
+              "queryRef": "financials.Segment",
+              "nativeQueryRef": "Segment"
             }
           ]
         }
+      },
+      "sortDefinition": {
+        "sort": [
+          {
+            "field": {
+              "Column": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "financials"
+                  }
+                },
+                "Property": "Month Name"
+              }
+            },
+            "direction": "Ascending"
+          }
+        ],
+        "isDefaultSort": true
       }
     },
+    "drillFilterOtherVisuals": true,
     "visualContainerObjects": {
       "title": [
         {
@@ -78,119 +101,21 @@
             "text": {
               "expr": {
                 "Literal": {
-                  "Value": "'Country Detail'"
+                  "Value": "'Sales by Month & Segment (Ribbon)'"
                 }
               }
             },
             "fontSize": {
               "expr": {
                 "Literal": {
-                  "Value": "10D"
+                  "Value": "8D"
                 }
               }
             },
             "fontFamily": {
               "expr": {
                 "Literal": {
-                  "Value": "''Segoe UI Semibold', wf_segoe-ui_semibold, helvetica, arial, sans-serif'"
-                }
-              }
-            }
-          }
-        }
-      ],
-      "background": [
-        {
-          "properties": {
-            "show": {
-              "expr": {
-                "Literal": {
-                  "Value": "true"
-                }
-              }
-            },
-            "transparency": {
-              "expr": {
-                "Literal": {
-                  "Value": "0D"
-                }
-              }
-            }
-          }
-        }
-      ],
-      "border": [
-        {
-          "properties": {
-            "show": {
-              "expr": {
-                "Literal": {
-                  "Value": "true"
-                }
-              }
-            },
-            "color": {
-              "solid": {
-                "color": {
-                  "expr": {
-                    "Literal": {
-                      "Value": "'#D1D5DB'"
-                    }
-                  }
-                }
-              }
-            },
-            "radius": {
-              "expr": {
-                "Literal": {
-                  "Value": "6D"
-                }
-              }
-            }
-          }
-        }
-      ],
-      "visualHeader": [
-        {
-          "properties": {
-            "show": {
-              "expr": {
-                "Literal": {
-                  "Value": "false"
-                }
-              }
-            }
-          }
-        }
-      ],
-      "padding": [
-        {
-          "properties": {
-            "top": {
-              "expr": {
-                "Literal": {
-                  "Value": "6D"
-                }
-              }
-            },
-            "bottom": {
-              "expr": {
-                "Literal": {
-                  "Value": "6D"
-                }
-              }
-            },
-            "left": {
-              "expr": {
-                "Literal": {
-                  "Value": "8D"
-                }
-              }
-            },
-            "right": {
-              "expr": {
-                "Literal": {
-                  "Value": "8D"
+                  "Value": "''Segoe UI', wf_segoe-ui_normal, helvetica, arial, sans-serif'"
                 }
               }
             }
@@ -198,12 +123,93 @@
         }
       ]
     },
-    "drillFilterOtherVisuals": true
+    "objects": {
+      "categoryAxis": [
+        {
+          "properties": {
+            "fontSize": {
+              "expr": {
+                "Literal": {
+                  "Value": "8D"
+                }
+              }
+            },
+            "fontFamily": {
+              "expr": {
+                "Literal": {
+                  "Value": "''Segoe UI', wf_segoe-ui_normal, helvetica, arial, sans-serif'"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "valueAxis": [
+        {
+          "properties": {
+            "fontSize": {
+              "expr": {
+                "Literal": {
+                  "Value": "8D"
+                }
+              }
+            },
+            "fontFamily": {
+              "expr": {
+                "Literal": {
+                  "Value": "''Segoe UI', wf_segoe-ui_normal, helvetica, arial, sans-serif'"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "labels": [
+        {
+          "properties": {
+            "fontSize": {
+              "expr": {
+                "Literal": {
+                  "Value": "8D"
+                }
+              }
+            },
+            "fontFamily": {
+              "expr": {
+                "Literal": {
+                  "Value": "''Segoe UI', wf_segoe-ui_normal, helvetica, arial, sans-serif'"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "legend": [
+        {
+          "properties": {
+            "fontSize": {
+              "expr": {
+                "Literal": {
+                  "Value": "8D"
+                }
+              }
+            },
+            "fontFamily": {
+              "expr": {
+                "Literal": {
+                  "Value": "''Segoe UI', wf_segoe-ui_normal, helvetica, arial, sans-serif'"
+                }
+              }
+            }
+          }
+        }
+      ]
+    }
   },
   "filterConfig": {
     "filters": [
       {
-        "name": "23d2367939e1084ca9c9",
+        "name": "c0bb3bbeca816a9e575d",
         "field": {
           "Column": {
             "Expression": {
@@ -211,13 +217,13 @@
                 "Entity": "financials"
               }
             },
-            "Property": "Country"
+            "Property": "Month Name"
           }
         },
         "type": "Categorical"
       },
       {
-        "name": "fd5de41796b55f0f2c0e",
+        "name": "03036d22c2364eb89a14",
         "field": {
           "Aggregation": {
             "Expression": {
@@ -236,23 +242,18 @@
         "type": "Advanced"
       },
       {
-        "name": "4bd9d66ee7d0af3e82be",
+        "name": "7de3ff1d37806894b882",
         "field": {
-          "Aggregation": {
+          "Column": {
             "Expression": {
-              "Column": {
-                "Expression": {
-                  "SourceRef": {
-                    "Entity": "financials"
-                  }
-                },
-                "Property": "Profit"
+              "SourceRef": {
+                "Entity": "financials"
               }
             },
-            "Function": 0
+            "Property": "Segment"
           }
         },
-        "type": "Advanced"
+        "type": "Categorical"
       }
     ]
   }

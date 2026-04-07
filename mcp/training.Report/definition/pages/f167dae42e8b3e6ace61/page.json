@@ -1,7 +1,7 @@
 {
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/page/2.1.0/schema.json",
-  "name": "a13550e9064b80f3db50",
-  "displayName": "UAT-TopN-2",
+  "name": "f167dae42e8b3e6ace61",
+  "displayName": "UAT-R1-Filters",
   "displayOption": "FitToPage",
   "height": 720,
   "width": 1280

@@ -1,8 +1,8 @@
 {
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/page/2.1.0/schema.json",
-  "name": "a13550e9064b80f3db50",
-  "displayName": "UAT-TopN-2",
+  "name": "f88b50d444daca5199d0",
+  "displayName": "UAT-R5-PageOps",
   "displayOption": "FitToPage",
-  "height": 720,
-  "width": 1280
+  "height": 640,
+  "width": 360
 }
