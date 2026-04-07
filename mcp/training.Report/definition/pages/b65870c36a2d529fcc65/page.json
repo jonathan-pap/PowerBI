@@ -1,8 +1,0 @@
-{
-  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/page/2.1.0/schema.json",
-  "name": "b65870c36a2d529fcc65",
-  "displayName": "UAT-R3-VisualTypes",
-  "displayOption": "FitToPage",
-  "height": 720,
-  "width": 1280
-}

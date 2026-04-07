@@ -1,0 +1,8 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/page/2.1.0/schema.json",
+  "name": "53c9d4dc950c6f7802d2",
+  "displayName": "T4-CondTitle",
+  "displayOption": "FitToPage",
+  "height": 720,
+  "width": 1280
+}
