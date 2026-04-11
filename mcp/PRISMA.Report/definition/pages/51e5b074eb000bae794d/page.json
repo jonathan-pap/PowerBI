@@ -1,8 +1,0 @@
-{
-  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/page/2.1.0/schema.json",
-  "name": "51e5b074eb000bae794d",
-  "displayName": "Store Performance",
-  "displayOption": "FitToPage",
-  "height": 720,
-  "width": 1280
-}

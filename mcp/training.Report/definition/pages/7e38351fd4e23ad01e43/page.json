@@ -1,8 +1,0 @@
-{
-  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/page/2.1.0/schema.json",
-  "name": "7e38351fd4e23ad01e43",
-  "displayName": "T9-DupVisual",
-  "displayOption": "FitToPage",
-  "height": 720,
-  "width": 1280
-}

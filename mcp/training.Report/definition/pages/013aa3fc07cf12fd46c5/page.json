@@ -1,8 +1,0 @@
-{
-  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/page/2.1.0/schema.json",
-  "name": "013aa3fc07cf12fd46c5",
-  "displayName": "T12-VisualOps",
-  "displayOption": "FitToPage",
-  "height": 720,
-  "width": 1280
-}

@@ -1,8 +1,0 @@
-{
-  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/page/2.1.0/schema.json",
-  "name": "4cde52aee355902f0b89",
-  "displayName": "T7-TransparencyFix",
-  "displayOption": "FitToPage",
-  "height": 720,
-  "width": 1280
-}

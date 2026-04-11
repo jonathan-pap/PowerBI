@@ -1,8 +1,0 @@
-{
-  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/page/2.1.0/schema.json",
-  "name": "ff7e7cb3687f86732eb3",
-  "displayName": "Z-Pattern Overview",
-  "displayOption": "FitToPage",
-  "height": 720,
-  "width": 1280
-}
