@@ -16,7 +16,7 @@ annotation __PBI_TimeIntelligenceEnabled = 0
 
 annotation PBI_QueryOrder = ["Customer","Date","Product","Sales","Store","Currency Exchange","DatabaseName","_measures"]
 
-annotation PBI_ProTooling = ["DevMode","TMDLView_Desktop","DaxQueryView_Desktop","MCP-PBIModeling","CopilotTooling"]
+annotation PBI_ProTooling = ["DevMode","TMDLView_Desktop","DaxQueryView_Desktop","MCP-PBIModeling","CopilotTooling","CalcGroup"]
 
 annotation __TEdtr = 1
 
@@ -27,6 +27,7 @@ ref table Sales
 ref table Store
 ref table 'Currency Exchange'
 ref table _measures
+ref table 'Calculation group'
 
 ref cultureInfo en-US
 

@@ -5,13 +5,13 @@
       "ordinal": 0,
       "scrollPosition": {
         "x": 0,
-        "y": 60.959871319610976
+        "y": 57.751457039631447
       },
       "nodes": [
         {
           "location": {
             "x": 0,
-            "y": 862.3
+            "y": 923.05
           },
           "nodeIndex": "Customer",
           "size": {
@@ -23,7 +23,7 @@
         {
           "location": {
             "x": 1087.4,
-            "y": 559.8
+            "y": 620.55
           },
           "nodeIndex": "Date",
           "size": {
@@ -35,7 +35,7 @@
         {
           "location": {
             "x": 493.9,
-            "y": 1060.4
+            "y": 1121.15
           },
           "nodeIndex": "Product",
           "size": {
@@ -47,7 +47,7 @@
         {
           "location": {
             "x": 443.84667124378245,
-            "y": 640.59586480100438
+            "y": 701.34586480100438
           },
           "nodeIndex": "Sales",
           "nodeLineageTag": "94d3ea3b-4449-4e27-903d-c961f1df5413",
@@ -60,7 +60,7 @@
         {
           "location": {
             "x": 724,
-            "y": 121.5
+            "y": 182.25
           },
           "nodeIndex": "Store",
           "nodeLineageTag": "aca9499e-9ded-4d0a-835d-f1f04b9d2e92",
@@ -73,7 +73,7 @@
         {
           "location": {
             "x": 1150.6,
-            "y": 170.5
+            "y": 231.25
           },
           "nodeIndex": "Currency Exchange",
           "size": {
@@ -85,11 +85,24 @@
         {
           "location": {
             "x": 1434.6,
-            "y": 661.95
+            "y": 722.7
           },
           "nodeIndex": "_measures",
           "size": {
             "height": 104,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 1718.6,
+            "y": 616.2
+          },
+          "nodeIndex": "Calculation group",
+          "nodeLineageTag": "58209fa5-0552-423e-92bc-90cbe1f69567",
+          "size": {
+            "height": 128,
             "width": 234
           },
           "zIndex": 0
