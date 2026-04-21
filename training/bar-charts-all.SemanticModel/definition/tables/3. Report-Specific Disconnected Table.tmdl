@@ -1,0 +1,59 @@
+table '3. Report-Specific Disconnected Table'
+	isHidden
+	lineageTag: fe2cdcff-7270-464b-bddc-7b06cdc7fdc3
+
+	measure 'Bar Chart & Candlestick' = ```
+			
+			// sqlbi measure replacement method
+			CALCULATE( 
+			    [Zero],
+			    TREATAS(
+			        DISTINCT( '3. Report-Specific Disconnected Table'[Attribute] ),
+			        '3. Report-Specific Calculation Group'[Attribute]
+			    )
+			)
+			```
+		isHidden
+		lineageTag: 0e596993-63a5-42a9-9dc0-aa320666263d
+
+		formatStringDefinition = ```
+				IF ( 
+				    SELECTEDVALUE ( '3. Report-Specific Disconnected Table'[Attribute] ) = "CHANGE",
+				    FORMAT( [Sum (Δ% PY - CY)], "+0\.0%;-0\.0%;0\.0%"),
+				    "#,##0"
+				)
+				```
+
+	column Attribute
+		isHidden
+		lineageTag: b683d841-5ca8-40dc-a3aa-b94c9aa78716
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: [Attribute]
+		sortByColumn: Order
+
+		annotation SummarizationSetBy = Automatic
+
+	column Order
+		isHidden
+		formatString: 0
+		lineageTag: 781445e6-72e9-47cf-ae90-7148209c7c40
+		summarizeBy: sum
+		isNameInferred
+		sourceColumn: [Order]
+
+		annotation SummarizationSetBy = Automatic
+
+	partition '3. Report-Specific Disconnected Table' = calculated
+		mode: import
+		source = ```
+				
+				SELECTCOLUMNS( 
+				    '3. Report-Specific Calculation Group',
+				    "Attribute", '3. Report-Specific Calculation Group'[Attribute],
+				    "Order", '3. Report-Specific Calculation Group'[Ordinal] 
+				)
+				```
+
+	annotation PBI_Id = 803854adc3014b728952e70307c7162a
+

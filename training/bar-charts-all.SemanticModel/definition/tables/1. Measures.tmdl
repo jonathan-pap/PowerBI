@@ -1,0 +1,118 @@
+table '1. Measures'
+	lineageTag: 4bd4c7d3-ed8c-4fc9-802b-4eb3b0893f5d
+
+	measure Percentage = ```
+			
+			VAR _Total = CALCULATE( SUM ( 'Table'[Quantitative] ), REMOVEFILTERS ( ) )
+			RETURN
+			DIVIDE ( 
+			    SUM ( 'Table'[Quantitative] ), 
+			    _Total
+			) + 0.15
+			```
+		formatString: 0.0%;-0.0%;0.0%
+		lineageTag: ccbbf42b-88e3-4b49-8192-f592b6d02dc4
+
+	measure Sum = SUM ( 'Table'[Quantitative] )
+		formatString: "  #,##0"
+		lineageTag: 71445de7-2cd6-43b8-81cb-8b9dd1159740
+
+		annotation PBI_FormatHint = {"isCustom":true}
+
+	measure 'Sum (CY)' =
+			
+			// This would normally be just the sum; where Sum (2022) would be using time intelligence or a similar method to calculate PY
+			CALCULATE(
+			    [Sum],
+			    'Table'[Year] = "  2023"
+			)
+		formatString: 0
+		lineageTag: 202a6bc8-71c3-41cc-9349-cde551b031a0
+
+	measure 'Sum (PY)' =
+			
+			// This would normally be calculated using time intelligence or a similar method to calculate PY
+			CALCULATE(
+			    [Sum],
+			    'Table'[Year] = "  2022"
+			)
+		formatString: 0
+		lineageTag: 6fe52e9a-2944-457b-97e7-ee4aadcdc2cc
+
+	measure 'Sum (ΔPY - CY)' =
+			
+			VAR _CY = [Sum (CY)]
+			VAR _PY = [Sum (PY)]
+			VAR _Delta = _CY - _PY
+			RETURN
+			_Delta
+		formatString: 0
+		lineageTag: 4cb18752-6c6d-444e-b2dd-dff2e86ce817
+
+	measure 'Sum (Δ% PY - CY)' =
+			
+			DIVIDE (
+			    [Sum (ΔPY - CY)],
+			    [Sum (PY)]
+			)
+		formatString: +#,##0.0%;-#,##0.0%;#,##0.0%
+		lineageTag: 546753a4-f8e4-45be-92c8-3a0ccdc60f66
+
+		annotation PBI_FormatHint = {"isCustom":true}
+
+	measure 'Dumbbell Candle Upper (Green)' =
+			
+			VAR _CY = [Sum (CY)]
+			VAR _PY = [Sum (PY)]
+			RETURN
+			IF ( _CY > _PY, _CY )
+		lineageTag: ddabfcbe-403f-4e32-bb5c-9c775387f4fe
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Dumbbell Candle Lower (Green)' =
+			
+			VAR _CY = [Sum (CY)]
+			VAR _PY = [Sum (PY)]
+			RETURN
+			IF ( _CY > _PY, _PY )
+		lineageTag: efacd5f7-169e-4e7d-b4fd-746f35c92480
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Dumbbell Candle Upper (Red)' =
+			
+			VAR _CY = [Sum (CY)]
+			VAR _PY = [Sum (PY)]
+			RETURN
+			IF ( _CY < _PY, _PY )
+		lineageTag: d636fe70-992e-4e3b-a007-3613a2b538a8
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Dumbbell Candle Lower (Red)' =
+			
+			VAR _CY = [Sum (CY)]
+			VAR _PY = [Sum (PY)]
+			RETURN
+			IF ( _CY < _PY, _CY )
+		lineageTag: 38f51b3a-e517-4ced-8582-2c1941fc8caf
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column Value
+		isHidden
+		formatString: 0
+		lineageTag: 18e219e8-e8e5-4a4e-8c86-825ff8a663c7
+		summarizeBy: sum
+		isNameInferred
+		sourceColumn: [Value]
+
+		annotation SummarizationSetBy = Automatic
+
+	partition '1. Measures' = calculated
+		mode: import
+		source = {1}
+
+	annotation PBI_Id = 724d8a875a79418db6f9113a2cf5d8eb
+

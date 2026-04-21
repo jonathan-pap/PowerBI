@@ -1,0 +1,174 @@
+table '1. Measures'
+	lineageTag: 4bd4c7d3-ed8c-4fc9-802b-4eb3b0893f5d
+
+	measure Percentage =
+			
+			--Disclaimer: DAX in these templates doesn't follow best practices
+			--            Don't use this DAX as-is; the templates are intended to be illustrative.
+			
+			VAR _Total =
+			    CALCULATE(
+			        SUM( 'Table'[Quantitative] ),
+			        REMOVEFILTERS( )
+			    )
+			RETURN
+			    DIVIDE(
+			        SUM( 'Table'[Quantitative] ),
+			        _Total
+			    )
+			        + 0.15
+		formatString: 0%;-0%;0%
+		displayFolder: Percent
+		lineageTag: ccbbf42b-88e3-4b49-8192-f592b6d02dc4
+
+	measure Sum =
+			
+			--Disclaimer: DAX in these templates doesn't follow best practices
+			--            Don't use this DAX as-is; the templates are intended to be illustrative.
+			
+			SUM( 'Table'[Quantitative] )
+		formatString: "  #,##0"
+		displayFolder: Sum
+		lineageTag: 71445de7-2cd6-43b8-81cb-8b9dd1159740
+
+		annotation PBI_FormatHint = {"isCustom":true}
+
+	measure 'Sum (CY YTD)' =
+			
+			--Disclaimer: DAX in these templates doesn't follow best practices
+			--            Don't use this DAX as-is; the templates are intended to be illustrative.
+			
+			CALCULATE(
+			    [Sum],
+			    CALCULATETABLE(
+			        DATESYTD( 'Date'[Date] ),
+			        'Date'[DatesWithSales (True/False)]
+			    )
+			)
+		formatString: #,0
+		displayFolder: Sum\YTD
+		lineageTag: 202a6bc8-71c3-41cc-9349-cde551b031a0
+
+	measure 'Sum (PY)' =
+			
+			--Disclaimer: DAX in these templates doesn't follow best practices
+			--            Don't use this DAX as-is; the templates are intended to be illustrative.
+			
+			CALCULATE(
+			    [Sum],
+			    SAMEPERIODLASTYEAR( 'Date'[Date] )
+			)
+		formatString: 0
+		displayFolder: Sum
+		lineageTag: 6fe52e9a-2944-457b-97e7-ee4aadcdc2cc
+
+	measure 'Sum (Δ PY YTD)' =
+			
+			--Disclaimer: DAX in these templates doesn't follow best practices
+			--            Don't use this DAX as-is; the templates are intended to be illustrative.
+			
+			VAR _CY = [Sum (CY YTD)]
+			VAR _PY = [Sum (PY YTD)]
+			VAR _Delta = _CY - _PY
+			RETURN
+			    _Delta
+		formatString: +#,##0;-#,##0;#,##0
+		displayFolder: Sum\YTD\vs. PY
+		lineageTag: 4cb18752-6c6d-444e-b2dd-dff2e86ce817
+
+		annotation PBI_FormatHint = {"isCustom":true}
+
+	measure 'Sum (Δ% PY YTD)' =
+			
+			--Disclaimer: DAX in these templates doesn't follow best practices
+			--            Don't use this DAX as-is; the templates are intended to be illustrative.
+			
+			DIVIDE(
+			    [Sum (Δ PY YTD)],
+			    [Sum (PY)]
+			)
+		displayFolder: Sum\YTD\vs. PY
+		lineageTag: 546753a4-f8e4-45be-92c8-3a0ccdc60f66
+
+		formatStringDefinition =
+				VAR _UpArrow = UNICHAR( 8595 )
+				VAR _DownArrow = UNICHAR( 8593 )
+				RETURN
+				    _DownArrow & " #,##0.0%" & ";"
+				        &    // Negative numbers
+				        _UpArrow
+				        & " #,##0.0%"
+				        & ";"
+				        &      // Positive numbers
+				        "#,##0.0"                           // Zero
+
+		annotation PBI_FormatHint = {"isCustom":true}
+
+	measure Count =
+			
+			--Disclaimer: DAX in these templates doesn't follow best practices
+			--            Don't use this DAX as-is; the templates are intended to be illustrative.
+			
+			COUNTROWS(
+			    VALUES( 'Table'[Dimension] )
+			)
+		displayFolder: Count
+		lineageTag: 4b4de92d-e3ee-4139-a985-1b450ff40060
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Sum (PY YTD)' =
+			
+			--Disclaimer: DAX in these templates doesn't follow best practices
+			--            Don't use this DAX as-is; the templates are intended to be illustrative.
+			
+			CALCULATE(
+			    [Sum (PY)],
+			    CALCULATETABLE(
+			        DATESYTD( 'Date'[Date] ),
+			        'Date'[DatesWithSales (True/False)]
+			    )
+			)
+		displayFolder: Sum\YTD
+		lineageTag: 56036eba-a803-48bd-9ad7-2d0f2af882bc
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Sum (% of PY YTD)' =
+			
+			--Disclaimer: DAX in these templates doesn't follow best practices
+			--            Don't use this DAX as-is; the templates are intended to be illustrative.
+			
+			VAR _Actuals = [Sum (CY YTD)]
+			VAR _Target = [Sum (PY YTD)]
+			VAR _Perc = DIVIDE( _Actuals, _Target )
+			RETURN
+			    _Perc
+		formatString: #,##0 %
+		displayFolder: Sum\YTD\vs. PY
+		lineageTag: efdaa006-24a4-4a68-a810-343bf07e07ee
+
+	measure Average = AVERAGE ( 'Table'[Quantitative] )
+		lineageTag: c753646f-4f8f-4d29-b960-da8cc2c49070
+
+	measure blank = BLANK ()
+		lineageTag: 07ef9694-e931-4ed5-8a15-eeb204d88f65
+
+	column Value
+		isHidden
+		formatString: 0
+		lineageTag: 18e219e8-e8e5-4a4e-8c86-825ff8a663c7
+		summarizeBy: sum
+		isNameInferred
+		sourceColumn: [Value]
+
+		annotation SummarizationSetBy = Automatic
+
+	partition '1. Measures' = calculated
+		mode: import
+		source =
+				
+				{ 1 }
+
+	annotation PBI_Id = 724d8a875a79418db6f9113a2cf5d8eb
+

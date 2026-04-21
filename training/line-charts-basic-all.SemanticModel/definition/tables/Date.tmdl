@@ -1,0 +1,126 @@
+table Date
+	lineageTag: 44d6cdc9-97fa-41ba-92c3-19c387a366aa
+
+	column Date
+		formatString: General Date
+		displayFolder: 1. Date
+		lineageTag: 4b6931fd-ffd7-49fe-b73c-9552d07b72c0
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: [Date]
+
+		annotation SummarizationSetBy = Automatic
+
+	column IsLatestMonth
+		isHidden
+		formatString: """TRUE"";""TRUE"";""FALSE"""
+		displayFolder: Report-Specific Columns
+		lineageTag: e333a594-fc2f-4719-8e35-170249d5a7de
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: [IsLatestMonth]
+
+		annotation SummarizationSetBy = Automatic
+
+	column LatestMonthName
+		isHidden
+		displayFolder: Report-Specific Columns
+		lineageTag: 71f54ef1-4636-425f-8bb2-6e407b1c1e41
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: [LatestMonthName]
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Month (#)'
+		formatString: 0
+		displayFolder: 2. Month
+		lineageTag: 4a97905c-84c8-437c-8629-3a94c3b3e87f
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: [Month (#)]
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Month (MMM)'
+		displayFolder: 2. Month
+		lineageTag: 91f3252c-7ac5-44c3-8c05-8564cf783ac7
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: [Month (MMM)]
+		sortByColumn: 'Month (#)'
+
+		annotation SummarizationSetBy = Automatic
+
+	column OtherMonthNames
+		isHidden
+		displayFolder: Report-Specific Columns
+		lineageTag: 03efa8ab-73ce-4cfc-8cb3-97aef052d53b
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: [OtherMonthNames]
+		sortByColumn: 'Month (#)'
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Quarter (#)'
+		formatString: 0
+		displayFolder: 3. Quarter
+		lineageTag: 12f422dc-0536-4979-b463-5efa927aadc4
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: [Quarter (#)]
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Quarter (Q#)'
+		displayFolder: 3. Quarter
+		lineageTag: ff458ded-5113-40ed-84f0-7361f48a45e7
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: [Quarter (Q#)]
+		sortByColumn: 'Quarter (#)'
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Year (#)'
+		formatString: 0
+		displayFolder: 4. Year
+		lineageTag: 5867e6ad-63f8-447d-8599-31225d6a52fb
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: [Year (#)]
+
+		annotation SummarizationSetBy = Automatic
+
+	partition Date = calculated
+		mode: import
+		source = ```
+				
+				
+				VAR _StartDate = MIN ( 'Table'[Date] )
+				VAR _LatestDate = MAX(  'Table'[Date] )
+				VAR _EndDate = DATE( YEAR( _LatestDate ), 12, 31 )
+				VAR _BaseCalendar = CALENDAR( _StartDate, _EndDate )
+				VAR _Beltalowda = 
+				    ADDCOLUMNS(
+				        _BaseCalendar,
+				        "Year (#)", YEAR( [Date] ), 
+				        "Quarter (Q#)", "Q" & QUARTER( [Date] ),
+				        "Quarter (#)", QUARTER( [Date] ),
+				        "Month (MMM)", FORMAT( [Date], "MMM" ),
+				        "Month (#)", MONTH( [Date] )
+				    )
+				VAR _Welwalla = 
+				    ADDCOLUMNS(
+				        _Beltalowda,
+				        "IsLatestMonth", [Month (#)] = MONTH ( _LatestDate ),
+				        "LatestMonthName", IF ( [Month (#)] = MONTH ( _LatestDate ), "Aug", " " ),
+				        "OtherMonthNames", IF ( [Month (#)] = MONTH ( _LatestDate ), " ", [Month (MMM)] )
+				    )
+				RETURN
+				_Welwalla
+				```
+
+	annotation PBI_Id = 011f28963b06425eaf162294fa163456
+

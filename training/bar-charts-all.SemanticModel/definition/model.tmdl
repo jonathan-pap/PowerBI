@@ -1,0 +1,34 @@
+model Model
+	culture: en-US
+	defaultPowerBIDataSourceVersion: powerBI_V3
+	discourageImplicitMeasures
+	sourceQueryCulture: en-US
+	dataAccessOptions
+		legacyRedirects
+		returnErrorValuesAsNull
+
+extendedProperty TabularEditor_DeploymentMetadata =
+		{
+		  "ClientMachine": "DESKTOP-NV69I5J",
+		  "DeploymentMode": "SaveUI",
+		  "TabularEditorBuild": "3.9.0.2972",
+		  "Time": "2023-07-26T01:35:00.5333614+02:00",
+		  "User": "DESKTOP-NV69I5J\\Klonk-Temp"
+		}
+
+annotation __PBI_TimeIntelligenceEnabled = 0
+
+annotation PBI_QueryOrder = ["Table"]
+
+annotation PBI_ProTooling = ["DevMode"]
+
+annotation __TEdtr = 1
+
+ref table Table
+ref table '2. Report-Specific Objects'
+ref table '1. Measures'
+ref table '3. Report-Specific Calculation Group'
+ref table '3. Report-Specific Disconnected Table'
+
+ref cultureInfo en-US
+

@@ -1,0 +1,62 @@
+table Table
+	lineageTag: 74c7dcbc-f534-4da1-9c59-174298c17e81
+
+	column Date
+		dataType: dateTime
+		formatString: Long Date
+		displayFolder: Dimensions
+		lineageTag: f5b0c4d6-8f33-4006-9065-823e0bf533b0
+		summarizeBy: none
+		sourceColumn: Date
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column Quantitative
+		dataType: double
+		displayFolder: Facts
+		lineageTag: 668171a0-db3e-43ca-bbba-fe8726005248
+		summarizeBy: sum
+		sourceColumn: Quantitative
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column Sub-Dimension
+		dataType: string
+		displayFolder: Dimensions
+		lineageTag: 9f44d7b1-03be-4dc8-ad1c-32b4503fb996
+		summarizeBy: none
+		sourceColumn: Sub-Dimension
+
+		annotation SummarizationSetBy = Automatic
+
+	column Year
+		dataType: string
+		displayFolder: Dimensions
+		lineageTag: f94a7412-424a-4c12-9e19-6a928be50131
+		summarizeBy: none
+		sourceColumn: Year
+
+		annotation SummarizationSetBy = Automatic
+
+	partition Table = m
+		mode: import
+		source = ```
+				let
+				    Source = 
+				    Table.FromRows(Json.Document(Binary.Decompress(Binary.FromText("7ZVNCoMwEEavIllbsJPJzw266BHEjXRTkGbR+0NnVUKTIZ9YigXBxYCPB5rnOI6GBrKn4SyX6c0lzcv98ZSp6+QGyUBm6j+oa5rTcntTVgabUaS6fElVXDllVZctqYorZhRDLlZdLqMc5HKqK2SUV11cUg1XUF2xpBrvPkLnGCHX1r4Y6stBfQWoL4b6ClBf/PMm/NHEHzWxp/1FO91fdLS66v+I9eVXt6r35aG+sF0Yob78F/uqbMzGN7S1L3nG6QU=", BinaryEncoding.Base64), Compression.Deflate)), let _t = ((type nullable text) meta [Serialized.Text = true]) in type table [Date = _t, #"Sub-Dimension" = _t, Year = _t, Quantitative = _t]),
+				    #"Changed Type" = Table.TransformColumnTypes(Source,{{"Date", type date}, {"Quantitative", Int64.Type}}),
+				    #"Added Custom" = Table.AddColumn(#"Changed Type", "Random Number", each Number.Round(( 0.8 + Number.Random() * 0.4 ) * [Quantitative], 3) ),
+				    #"Sorted Rows" = Table.Sort(#"Added Custom",{{"Date", Order.Ascending}}),
+				    #"Removed Columns" = Table.RemoveColumns(#"Sorted Rows",{"Quantitative"}),
+				    #"Changed Type1" = Table.TransformColumnTypes(#"Removed Columns",{{"Random Number", type number}}),
+				    #"Renamed Columns" = Table.RenameColumns(#"Changed Type1",{{"Random Number", "Quantitative"}})
+				in
+				    #"Renamed Columns"
+				```
+
+	annotation PBI_ResultType = Table
+

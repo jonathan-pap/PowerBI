@@ -1,0 +1,196 @@
+table Table
+	isHidden
+	lineageTag: 74c7dcbc-f534-4da1-9c59-174298c17e81
+
+	column Dimension
+		dataType: string
+		isHidden
+		displayFolder: Columns
+		lineageTag: b6428db5-956a-46cf-8e0d-f78eb01375b5
+		summarizeBy: none
+		sourceColumn: Dimension
+
+		annotation SummarizationSetBy = Automatic
+
+	column SubDimension
+		dataType: string
+		isHidden
+		displayFolder: Columns
+		lineageTag: 5e30f180-4ec3-494a-b8ad-8c11697dd2f6
+		summarizeBy: none
+		sourceColumn: SubDimension
+
+		annotation SummarizationSetBy = Automatic
+
+	column Month
+		dataType: dateTime
+		isHidden
+		formatString: Long Date
+		displayFolder: Columns
+		lineageTag: 90826514-1f5c-4f5a-97ec-cb24d73861b0
+		summarizeBy: none
+		sourceColumn: Month
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column Year
+		dataType: int64
+		isHidden
+		formatString: 0
+		displayFolder: Columns
+		lineageTag: 375a89cb-dd50-4436-8b44-7f963752da6a
+		summarizeBy: sum
+		sourceColumn: Year
+
+		annotation SummarizationSetBy = Automatic
+
+	column Quantitative
+		dataType: int64
+		isHidden
+		formatString: 0
+		displayFolder: Columns
+		lineageTag: 6707e5e6-d461-4e15-88ef-6d8c60a6e2a5
+		summarizeBy: sum
+		sourceColumn: Quantitative
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Boolean Dimension'
+		dataType: string
+		isHidden
+		displayFolder: Columns
+		lineageTag: 2ffa966d-3a78-44d3-9521-f4ea6d5686da
+		summarizeBy: none
+		sourceColumn: Boolean Dimension
+
+		annotation SummarizationSetBy = Automatic
+
+	partition Table = m
+		mode: import
+		source = ```
+				let
+				    Dimensions = 
+				        #table(
+				            {"Dimension", "SubDimension"}, 
+				                {   
+				                    {"Elves", "Fighter"}, 
+				                    {"Elves", "Rogue"}, 
+				                    {"Elves", "Sorcerer"}, 
+				                    {"Goblins", "Fighter"}, 
+				                    {"Goblins", "Rogue"}, 
+				                    {"Goblins", "Sorcerer"}, 
+				                    {"Orcs", "Fighter"}, 
+				                    {"Orcs", "Rogue"}, 
+				                    {"Orcs", "Sorcerer"}
+				                }
+				        ),
+				
+				    // All dates in last 2 years YTD
+				    #"CY" = Date.Year(DateTime.FixedLocalNow()),
+				    #"PY" = Date.Year(DateTime.FixedLocalNow()) - 1,
+				
+				    DateList2022 = 
+				        List.Dates(
+				            #date(#"PY", 1, 1), 
+				            Duration.Days(#date(#"PY", 12, 31) - #date(#"PY", 1, 1)) + 1, 
+				            #duration(1, 0, 0, 0)
+				        ),
+				
+				    DateList2023 = 
+				        List.Dates(
+				            #date(#"CY", 1, 1), 
+				            Duration.Days(#date(#"CY", 8, 31) - #date(#"CY", 1, 1)) + 1, 
+				            #duration(1, 0, 0, 0)
+				        ),
+				    
+				    CombinedDates = 
+				        DateList2022 & DateList2023,
+				    
+				    DateTable = 
+				        Table.FromList(
+				            CombinedDates,
+				            Splitter.SplitByNothing(),
+				            null,
+				            null,
+				            ExtraValues.Error
+				        ),
+				
+				    // Cross join dates and dimensions to create base table
+				    JoinFunction = (DateValue) => Table.AddColumn(Dimensions, "Month", each DateValue),
+				
+				    CrossJoin = 
+				        Table.TransformRows(DateTable, (row) => JoinFunction(row[Column1])),
+				    
+				    MergedTable = 
+				        Table.FromList(
+				            CrossJoin, 
+				            Splitter.SplitByNothing(), 
+				            null, 
+				            null, 
+				            ExtraValues.Error
+				        ),
+				    
+				    FinalTableBase = 
+				        Table.ExpandTableColumn(
+				            MergedTable, 
+				            "Column1", 
+				            {"Dimension", "SubDimension", "Month"}
+				        ),
+				
+				    WithValues = 
+				        Table.AddColumn(
+				            FinalTableBase, 
+				            "Quantitative", 
+				            each 
+				                let 
+				                    YearValue = Date.Year([Month]),
+				                    RandomValue = Number.RoundDown(20 + Number.RandomBetween(-25, 50)),
+				                    BaseValue = 0 + RandomValue
+				                in
+				                    if YearValue = #"PY" then
+				                        BaseValue
+				                    else if YearValue = #"CY" and [Dimension] <> "Goblins" then
+				                        BaseValue * 0.85
+				                    else if YearValue = #"CY" and [Dimension] = "Goblins" then
+				                        BaseValue * 1.11
+				                    else 0
+				        ),
+				
+				    #"Changed Type" = 
+				        Table.TransformColumnTypes(
+				            WithValues,
+				            {
+				                {"Quantitative", Int64.Type},
+				                {"Month", type date},
+				                {"SubDimension", type text},
+				                {"Dimension", type text}
+				            }
+				        ),
+				
+				    #"Inserted Year" = 
+				        Table.AddColumn(
+				            #"Changed Type", 
+				            "Year", 
+				            each Date.Year([Month]), 
+				            Int64.Type
+				        ),
+				
+				    #"Goblins/Others" = 
+				        Table.AddColumn(
+				            #"Inserted Year",
+				            "Boolean Dimension",
+				            each
+				                if [#"Dimension"] = "Goblins" then "Approved"
+				                else "Unapproved",
+				            type text
+				        )
+				in
+				    #"Goblins/Others"
+				```
+
+	annotation PBI_ResultType = Table
+
+	annotation PBI_NavigationStepName = Navigation
+
