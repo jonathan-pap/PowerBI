@@ -2,5 +2,7 @@
 **/.pbi/cache.abf
 
 examples/
+docs/
 training/
 .claude/
+datasets/ccusage/

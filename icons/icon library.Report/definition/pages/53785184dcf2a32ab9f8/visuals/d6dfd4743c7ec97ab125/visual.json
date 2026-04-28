@@ -491,5 +491,65 @@
       ]
     },
     "drillFilterOtherVisuals": true
+  },
+  "filterConfig": {
+    "filters": [
+      {
+        "name": "c6c55b996dc0a960f0e8",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Icons"
+              }
+            },
+            "Property": "IconName"
+          }
+        },
+        "type": "Categorical"
+      },
+      {
+        "name": "77c234c73f5b7a891c45",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Setname"
+              }
+            },
+            "Property": "Icon Builders White"
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "b170653f51dd38f3a379",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Setname"
+              }
+            },
+            "Property": "Icon Builders Black"
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "2c4278df39a879396cf4",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Setname"
+              }
+            },
+            "Property": "Icon Builders Grey"
+          }
+        },
+        "type": "Advanced"
+      }
+    ]
   }
 }
