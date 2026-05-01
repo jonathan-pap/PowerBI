@@ -41,23 +41,16 @@ table 'Color Pallette'
 
 		annotation SummarizationSetBy = Automatic
 
-	column Column1
-		dataType: string
-		lineageTag: 54ac2a58-b41c-403d-8ce9-8c717d16adc0
-		summarizeBy: none
-		sourceColumn: Column1
-
-		annotation SummarizationSetBy = Automatic
-
 	partition 'Color Pallette' = m
 		mode: import
 		source =
 				let
 				    Source = Csv.Document(File.Contents("C:\Users\jonathan\OneDrive\PowerBI\PowerBI\icons\color_palette.csv"),[Delimiter=",", Columns=6, Encoding=1252, QuoteStyle=QuoteStyle.None]),
 				    #"Promoted Headers" = Table.PromoteHeaders(Source, [PromoteAllScalars=true]),
-				    #"Changed Type" = Table.TransformColumnTypes(#"Promoted Headers",{{"ColorName", type text}, {"Variant", type text}, {"Hex", type text}, {"HexClean", type text}, {"SvgSafe", type text}, {"", type text}})
+				    #"Changed Type" = Table.TransformColumnTypes(#"Promoted Headers",{{"ColorName", type text}, {"Variant", type text}, {"Hex", type text}, {"HexClean", type text}, {"SvgSafe", type text}, {"", type text}}),
+				    #"Removed Columns" = Table.RemoveColumns(#"Changed Type",{"Column1"})
 				in
-				    #"Changed Type"
+				    #"Removed Columns"
 
 	annotation PBI_NavigationStepName = Navigation
 

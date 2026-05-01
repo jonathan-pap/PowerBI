@@ -1,5 +1,5 @@
 {
-  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.7.0/schema.json",
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.8.0/schema.json",
   "name": "52628ffe6307b9207814",
   "position": {
     "x": 71.822660098522164,
@@ -81,7 +81,7 @@
                           [
                             {
                               "Literal": {
-                                "Value": "'Dark'"
+                                "Value": "'Base'"
                               }
                             }
                           ]
